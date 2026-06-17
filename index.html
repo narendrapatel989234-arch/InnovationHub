@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Innovation Hub — Dashboard</title>
+  <meta name="description" content="Innovation Hub commercial intelligence dashboard for Sara Al Mansoori">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <!-- Purple cube-like icon -->
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="8" width="18" height="18" rx="4" fill="#7C5CFC" opacity="0.8"/>
+            <rect x="8" y="3" width="18" height="18" rx="4" fill="#A78BFA"/>
+            <rect x="10" y="5" width="14" height="14" rx="3" fill="#C4B5FD"/>
+          </svg>
+        </div>
+        <span class="sidebar-logo-text">Innovation Hub</span>
+      </div>
+      <button class="sidebar-close" aria-label="Close sidebar">
+        <!-- X icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+      <div class="nav-item active" id="nav-dashboard">
+        <span class="nav-icon">
+          <!-- LayoutGrid -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </span>
+        <span>Dashboard</span>
+      </div>
+      <div class="nav-item" id="nav-agent-repository">
+        <span class="nav-icon">
+          <!-- UserCircle -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="10" r="3"/>
+            <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/>
+          </svg>
+        </span>
+        <span>Agent Repository</span>
+      </div>
+      <div class="nav-item" id="nav-workflows">
+        <span class="nav-icon">
+          <!-- GitBranch -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" y1="3" x2="6" y2="15"/>
+            <circle cx="18" cy="6" r="3"/>
+            <circle cx="6" cy="18" r="3"/>
+            <path d="M18 9a9 9 0 0 1-9 9"/>
+          </svg>
+        </span>
+        <span>Workflows</span>
+      </div>
+      <div class="nav-item" id="nav-campaigns">
+        <span class="nav-icon">
+          <!-- Megaphone -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 11 18-5v12L3 13v-2z"/>
+            <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+          </svg>
+        </span>
+        <span>Campaigns</span>
+      </div>
+      <div class="nav-item" id="nav-insights">
+        <span class="nav-icon">
+          <!-- PieChart -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+            <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+          </svg>
+        </span>
+        <span>Insights</span>
+      </div>
+      <div class="nav-item" id="nav-documents">
+        <span class="nav-icon">
+          <!-- FileText -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </span>
+        <span>Documents</span>
+      </div>
+      <div class="nav-item" id="nav-settings">
+        <span class="nav-icon">
+          <!-- Settings -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </span>
+        <span>Settings</span>
+      </div>
+    </nav>
+
+    <!-- Profile -->
+    <div class="sidebar-profile">
+      <div class="profile-avatar">
+        <!-- Avatar placeholder using initials -->
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#8B5CF6"/>
+              <stop offset="100%" style="stop-color:#C084FC"/>
+            </linearGradient>
+          </defs>
+          <rect width="40" height="40" rx="20" fill="url(#avatarGrad)"/>
+          <text x="20" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="white" text-anchor="middle">SA</text>
+        </svg>
+      </div>
+      <div class="profile-info">
+        <div class="profile-name">Sara Al Mansoori</div>
+        <div class="profile-role">Commercial Manager</div>
+      </div>
+      <span class="profile-chevron">
+        <!-- ChevronDown -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </span>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="main-content">
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <h1 class="header-greeting">Good morning, Sara ☀️</h1>
+      <div class="header-center">
+        <span class="header-updated">Last updated: 09:15 AM</span>
+      </div>
+      <div class="header-right">
+        <div class="search-wrapper">
+          <span class="search-icon">
+            <!-- Search -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </span>
+          <input class="search-input" type="text" placeholder="Search anything..." id="search-input">
+        </div>
+        <button class="notification-btn" id="notification-btn" aria-label="Notifications">
+          <!-- Bell -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <span class="notification-dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Content Body -->
+    <div class="content-body">
+
+      <!-- Section: Prioritized Open Actions -->
+      <div class="section-title-row">
+        <h2 class="section-title">Prioritized Open Actions</h2>
+        <a href="#" class="section-link">View all open actions →</a>
+      </div>
+
+      <!-- Priority Card -->
+      <div class="priority-card" id="priority-card">
+
+        <!-- Action Row 1 -->
+        <div class="action-row">
+          <div class="action-icon">
+            <!-- Alert Triangle -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <div class="action-body">
+            <div class="action-label">OPEN ACTION #1</div>
+            <div class="action-title">
+              <span class="action-title-text">Competitor Price Disruption Detected</span>
+              <span class="badge">High Priority</span>
+            </div>
+            <div class="action-subtitle">Hero SKUs impacted across UAE · KSA · Qatar</div>
+          </div>
+          <div class="action-right">
+            <span class="action-meta">2 Open Actions</span>
+            <button class="btn-primary" id="btn-view-summary">View Summary</button>
+          </div>
+        </div>
+
+        <!-- Action Row 2 -->
+        <div class="action-row">
+          <div class="action-icon">
+            <!-- FileText -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="action-body">
+            <div class="action-label">OPEN ACTION #2</div>
+            <div class="action-title">
+              <span class="action-title-text">Update new campaign templates after review</span>
+              <span class="badge">Medium Priority</span>
+            </div>
+            <div class="action-subtitle">New promotional templates have been prepared based on overnight market analysis</div>
+          </div>
+          <div class="action-right">
+            <span class="action-meta">Pending since 2 days</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Cards Row -->
+      <div class="cards-row">
+
+        <!-- Card 1: Pending Actions -->
+        <div class="card" id="card-pending-actions">
+          <div class="card-header">
+            <h3 class="card-title">Pending Actions</h3>
+            <a href="#" class="card-link">View all</a>
+          </div>
+          <div class="pending-list">
+            <!-- Item 1 -->
+            <div class="pending-item">
+              <div class="pending-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              <div class="pending-body">
+                <div class="pending-title">KSA Competitor Defense Plan</div>
+                <div class="pending-sub">Updated 2h ago</div>
+              </div>
+              <span class="pending-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </span>
+            </div>
+            <!-- Item 2 -->
+            <div class="pending-item">
+              <div class="pending-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              <div class="pending-body">
+                <div class="pending-title">Retail Disruption Response Email</div>
+                <div class="pending-sub">Updated 5h ago</div>
+              </div>
+              <span class="pending-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </span>
+            </div>
+            <!-- Item 3 -->
+            <div class="pending-item">
+              <div class="pending-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              <div class="pending-body">
+                <div class="pending-title">Commercial Team Briefing</div>
+                <div class="pending-sub">Updated 6h ago</div>
+              </div>
+              <span class="pending-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Overnight Activities -->
+        <div class="card" id="card-overnight-activities">
+          <div class="card-header">
+            <h3 class="card-title">Overnight Activities</h3>
+            <a href="#" class="card-link">View all</a>
+          </div>
+          <div class="overnight-list">
+            <!-- Item 1 -->
+            <div class="overnight-item">
+              <div class="overnight-icon">
+                <!-- Search/Scan icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </div>
+              <div class="overnight-body">
+                <div class="overnight-title">Competitor Disruption Detected</div>
+                <div class="overnight-sub">Market scan completed</div>
+              </div>
+              <span class="overnight-time">02:41 AM</span>
+            </div>
+            <!-- Item 2 -->
+            <div class="overnight-item">
+              <div class="overnight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+                  <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+                </svg>
+              </div>
+              <div class="overnight-body">
+                <div class="overnight-title">Upcoming Campaign Impact Analyzed</div>
+                <div class="overnight-sub">Scenario modeling completed</div>
+              </div>
+              <span class="overnight-time">02:05 AM</span>
+            </div>
+            <!-- Item 3 -->
+            <div class="overnight-item">
+              <div class="overnight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+              </div>
+              <div class="overnight-body">
+                <div class="overnight-title">Strategy and Pricing Reviewed</div>
+                <div class="overnight-sub">Strategy review completed</div>
+              </div>
+              <span class="overnight-time">02:17 AM</span>
+            </div>
+            <!-- Item 4 -->
+            <div class="overnight-item">
+              <div class="overnight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              <div class="overnight-body">
+                <div class="overnight-title">Campaign Template Generation Workflow</div>
+                <div class="overnight-sub">Updated campaign templates generated</div>
+              </div>
+              <span class="overnight-time">02:29 AM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Key Metrics (WTD) -->
+        <div class="card" id="card-key-metrics">
+          <div class="card-header">
+            <h3 class="card-title">Key Metrics (WTD)</h3>
+            <a href="#" class="card-link">View full dashboard</a>
+          </div>
+          <div class="metrics-list">
+            <!-- Metric 1 -->
+            <div class="metric-item">
+              <span class="metric-label">Active Campaigns</span>
+              <span class="metric-value">5</span>
+              <span class="metric-change up">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="18 15 12 9 6 15"/>
+                </svg>
+                25%
+              </span>
+            </div>
+            <!-- Metric 2 -->
+            <div class="metric-item">
+              <span class="metric-label">Upcoming Appointments</span>
+              <span class="metric-value">3</span>
+              <span class="metric-change up">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="18 15 12 9 6 15"/>
+                </svg>
+                50%
+              </span>
+            </div>
+            <!-- Metric 3 -->
+            <div class="metric-item">
+              <span class="metric-label">Pending Actions</span>
+              <span class="metric-value">6</span>
+              <span class="metric-change up">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="18 15 12 9 6 15"/>
+                </svg>
+                20%
+              </span>
+            </div>
+            <!-- Metric 4 -->
+            <div class="metric-item">
+              <span class="metric-label">Risk Level</span>
+              <span class="metric-value">Medium</span>
+              <span class="metric-change down">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+                10%
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /cards-row -->
+
+    </div>
+    <!-- /content-body -->
+
+  </main>
+
+</div>
+<!-- /dashboard-layout -->
+
+</body>
+</html>
