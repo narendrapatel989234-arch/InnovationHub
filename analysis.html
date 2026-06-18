@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Innovation Hub — Analysis & Chat</title>
+  <meta name="description" content="Innovation Hub Analysis and Chat page">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <!-- Purple cube-like icon -->
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="8" width="18" height="18" rx="4" fill="#7C5CFC" opacity="0.8"/>
+            <rect x="8" y="3" width="18" height="18" rx="4" fill="#A78BFA"/>
+            <rect x="10" y="5" width="14" height="14" rx="3" fill="#C4B5FD"/>
+          </svg>
+        </div>
+        <span class="sidebar-logo-text">Innovation Hub</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-item active" style="text-decoration: none;">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </span>
+        <span>Dashboard</span>
+      </a>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="10" r="3"/>
+            <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/>
+          </svg>
+        </span>
+        <span>Agent Repository</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" y1="3" x2="6" y2="15"/>
+            <circle cx="18" cy="6" r="3"/>
+            <circle cx="6" cy="18" r="3"/>
+            <path d="M18 9a9 9 0 0 1-9 9"/>
+          </svg>
+        </span>
+        <span>Workflows</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 11 18-5v12L3 13v-2z"/>
+            <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+          </svg>
+        </span>
+        <span>Campaigns</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+            <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+          </svg>
+        </span>
+        <span>Insights</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </span>
+        <span>Documents</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </span>
+        <span>Settings</span>
+      </div>
+    </nav>
+
+    <!-- Profile -->
+    <div class="sidebar-profile">
+      <div class="profile-avatar">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="avatarGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#8B5CF6"/>
+              <stop offset="100%" style="stop-color:#C084FC"/>
+            </linearGradient>
+          </defs>
+          <rect width="40" height="40" rx="20" fill="url(#avatarGrad3)"/>
+          <text x="20" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="white" text-anchor="middle">SA</text>
+        </svg>
+      </div>
+      <div class="profile-info">
+        <div class="profile-name">Sara Al Mansoori</div>
+        <div class="profile-role">Commercial Manager</div>
+      </div>
+      <span class="profile-chevron">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </span>
+    </div>
+  </aside>  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="main-content analysis-page-content">
+    <div class="analysis-scroll-area" id="analysis-scroll-area">
+      <!-- Header area -->
+      <div class="summary-header-wrap">
+        <div class="summary-header-top">
+          <a href="index.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Dashboard
+          </a>
+        </div>
+        <div class="summary-header-main">
+          <div class="summary-title-col">
+            <h1 class="summary-title" style="margin-top: 16px;">Analysis & Chat</h1>
+          </div>
+          <div class="summary-actions">
+            <button class="btn-outline">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span style="color: var(--color-primary);">Schedule a Meeting</span>
+            </button>
+            <button class="btn-primary export-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Export Report
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="summary-tabs">
+        <a href="summary.html" class="tab-item" style="text-decoration: none;">Summary</a>
+        <div class="tab-item active">Analysis & Chat</div>
+        <div class="tab-item">Agents Involved</div>
+        <div class="tab-item">Agent Triggered</div>
+        <div class="tab-item">Data & Sources</div>
+      </div>
+
+      <!-- Main Card -->
+            <!-- New Scenario Card Template -->
+            <!-- Initial Default Scenario Card -->
+      <div class="analysis-card" id="initial-scenario-card" style="display: block;">
+        
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--color-border); display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 8v4l3 3"></path></svg>
+          </div>
+          <div>
+            <h2 class="bot-response-title" style="margin-bottom: 4px; font-size: 22px;">Competitor Disruption Response</h2>
+            <div style="color: var(--color-text-secondary); font-size: 13px;">Analysis Complete • Generated by Super Agent & Specialist Agents</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 24px; margin-top: 24px; margin-bottom: 32px; flex-wrap: wrap; color: var(--color-text-primary); font-size: 13px; font-weight: 500;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>Markets Assessed: UAE - KSA - Qatar</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-primary)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Campaign Launch Window: 48 Hours</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Confidence Score: 92%</span>
+          </div>
+        </div>
+
+        <!-- Executive Snapshot -->
+        <div class="bot-section">
+          <div class="bot-section-title" style="font-size: 16px; margin-bottom: 16px;">Executive Snapshot</div>
+          <table class="agent-table">
+            <thead>
+              <tr style="background: #F8FAFC;">
+                <th style="font-weight: 600; color: var(--color-text-primary);">Competitor Discount</th>
+                <th style="font-weight: 600; color: var(--color-text-primary);">Impacted Markets</th>
+                <th style="font-weight: 600; color: var(--color-text-primary);">High Risk Market</th>
+                <th style="font-weight: 600; color: var(--color-text-primary);">Recommended Strategy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: 500;">14% Price Reduction</td>
+                <td style="font-weight: 500;">UAE - Saudi Arabia - Qatar</td>
+                <td style="font-weight: 500;">Saudi Arabia</td>
+                <td style="font-weight: 500;">Selective Regional Response</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Agent Findings -->
+        <div class="bot-section">
+          <div class="bot-section-title" style="font-size: 16px; margin-bottom: 16px;">Agent Findings</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+            <!-- Pricing Agent -->
+            <div style="border: 1px solid var(--color-border); border-radius: 12px; padding: 20px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: var(--color-text-primary);">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--color-primary)" stroke-width="2"><rect x="18" y="3" width="4" height="18"></rect><rect x="10" y="8" width="4" height="13"></rect><rect x="2" y="13" width="4" height="8"></rect></svg>
+                Pricing & Demand Agent
+              </div>
+              <ul class="finding-list">
+                <li>Competitor reduced price by 14% on a top-selling campaign SKU</li>
+                <li>UAE conversion declining among price-sensitive customers</li>
+                <li>Loyalty customers likely to respond to a limited-time value offer</li>
+              </ul>
+            </div>
+            <!-- Inventory Agent -->
+            <div style="border: 1px solid var(--color-border); border-radius: 12px; padding: 20px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: var(--color-text-primary);">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--color-primary)" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                Inventory Agent
+              </div>
+              <ul class="finding-list">
+                <li>Saudi inventory surplus identified</li>
+                <li>Regional bundle opportunity available</li>
+                <li>18% inventory opportunity detected</li>
+              </ul>
+            </div>
+            <!-- Campaign Agent -->
+            <div style="border: 1px solid var(--color-border); border-radius: 12px; padding: 20px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: var(--color-text-primary);">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--color-primary)" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                Campaign Agent
+              </div>
+              <ul class="finding-list">
+                <li>Weekend campaign requires adjustment</li>
+                <li>Messaging refresh recommended</li>
+                <li>Launch readiness review completed</li>
+              </ul>
+            </div>
+            <!-- Super Agent -->
+            <div style="border: 1px solid var(--color-border); border-radius: 12px; padding: 20px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: var(--color-text-primary);">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M13.5 2H2v11.5c0 6.35 5.15 11.5 11.5 11.5S25 19.85 25 13.5 19.85 2 13.5 2z"></path><polygon points="9.5 9 14.5 14 20.5 8 16 3"></polygon></svg>
+                Super Agent
+              </div>
+              <ul class="finding-list">
+                <li>Full price match not recommended</li>
+                <li>Selective regional response advised</li>
+                <li>Revenue protection prioritized over discount matching</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Response Scenario Comparison -->
+        <div class="bot-section">
+          <div class="bot-section-title" style="font-size: 16px; margin-bottom: 16px;">Response Scenario Comparison</div>
+          <div class="bot-chart-container" style="border: 1px solid var(--color-border); border-radius: 12px; padding: 40px 24px; position: relative; margin-bottom: 24px;">
+            <div class="chart-mockup" style="height: 200px;">
+              <div class="chart-y-axis-left" style="left: 0;">
+                <span>200</span><span>150</span><span>100</span><span>50</span><span>0</span>
+                <div style="position:absolute; left:-40px; top:50%; transform:translateY(-50%) rotate(-90deg); white-space:nowrap; font-size:10px;">Revenue ($M)</div>
+              </div>
+              
+              <!-- Custom Chart SVG matching the image -->
+              <svg class="chart-line-svg" viewBox="0 0 600 200" preserveAspectRatio="none" style="z-index: 10;">
+                <!-- Margin Line -->
+                <polyline points="150,40 350,0 550,140" fill="none" stroke="var(--color-primary)" stroke-width="2" />
+                <circle cx="150" cy="40" r="4" fill="var(--color-primary)" />
+                <circle cx="350" cy="0" r="4" fill="var(--color-primary)" />
+                <circle cx="550" cy="140" r="4" fill="var(--color-primary)" />
+              </svg>
+
+              <!-- Bars for Revenue -->
+              <div class="chart-bar-group" style="position: absolute; bottom: 0; left: 25%; transform: translateX(-50%); width: 60px;">
+                <div class="chart-bar" style="height: 140px; background-color: var(--color-primary); width: 100%;"></div>
+                <div class="chart-x-axis" style="bottom: -30px; width:120px; left:-30px;">No Action</div>
+              </div>
+              <div class="chart-bar-group" style="position: absolute; bottom: 0; left: 58.33%; transform: translateX(-50%); width: 60px;">
+                <div class="chart-bar" style="height: 170px; background-color: var(--color-primary); width: 100%;"></div>
+                <div class="chart-x-axis" style="bottom: -30px; width:120px; left:-30px;">Match 20%</div>
+              </div>
+              <div class="chart-bar-group" style="position: absolute; bottom: 0; left: 91.66%; transform: translateX(-50%); width: 60px;">
+                <div class="chart-bar" style="height: 160px; background-color: var(--color-primary); width: 100%;"></div>
+                <div class="chart-x-axis" style="bottom: -30px; width:120px; left:-30px;">Tactical UAE</div>
+              </div>
+
+              <div class="chart-y-axis-right" style="right: 0;">
+                <span>100</span><span>75</span><span>50</span><span>25</span><span>0</span>
+                <div style="position:absolute; right:-40px; top:50%; transform:translateY(-50%) rotate(90deg); white-space:nowrap; font-size:10px;">Stock-Out Risk (%)</div>
+              </div>
+              
+              <div class="bot-chart-legend" style="bottom: -60px; display: flex; justify-content: center; gap: 24px; position: absolute; width: 100%;">
+                <div style="font-size: 12px; color: var(--color-text-secondary);"><span style="background:var(--color-primary); width:12px; height:12px; display:inline-block; margin-right:8px; border-radius:2px; vertical-align:middle;"></span>Revenue ($M)</div>
+                <div style="font-size: 12px; color: var(--color-text-secondary);"><span style="background:var(--color-primary); width:12px; height:2px; display:inline-block; margin-right:8px; vertical-align:middle;"></span><span style="display:inline-block; width:6px; height:6px; background:var(--color-primary); border-radius:50%; margin-left:-11px; margin-right:5px; vertical-align:middle;"></span>Stock-Out Risk (%)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Response Strategy -->
+        <div class="bot-section">
+          <div class="bot-section-title" style="font-size: 16px; margin-bottom: 16px;">Response Strategy</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 600; margin-bottom: 8px;">🇦🇪 UAE</div>
+              <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px; font-size: 14px;">Targeted Price Defense</div>
+              <div style="color: var(--color-text-secondary); font-size: 13px; margin-bottom: 12px;">Selected Hero SKU</div>
+              <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">Risk Level</div>
+              <span style="display: inline-block; padding: 4px 12px; border: 1px solid var(--color-primary); border-radius: 16px; font-size: 12px; color: var(--color-primary); font-weight: 500;">Medium Risk</span>
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 600; margin-bottom: 8px;">🇸🇦 Saudi Arabia</div>
+              <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px; font-size: 14px;">Loyalty Bundle Strategy</div>
+              <div style="color: var(--color-text-secondary); font-size: 13px; margin-bottom: 12px;">Use Overstock Inventory</div>
+              <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">Risk Level</div>
+              <span style="display: inline-block; padding: 4px 12px; border: 1px solid var(--color-primary); border-radius: 16px; font-size: 12px; color: var(--color-primary); font-weight: 500;">High Risk</span>
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 600; margin-bottom: 8px;">🇶🇦 Qatar</div>
+              <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px; font-size: 14px;">Monitor & Maintain</div>
+              <div style="color: var(--color-text-secondary); font-size: 13px; margin-bottom: 12px;">No Pricing Changes</div>
+              <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">Risk Level</div>
+              <span style="display: inline-block; padding: 4px 12px; border: 1px solid var(--color-primary); border-radius: 16px; font-size: 12px; color: var(--color-primary); font-weight: 500;">Low Risk</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projected Business Impact -->
+        <div class="bot-section" style="margin-top: 32px;">
+          <div class="bot-section-title" style="font-size: 16px; margin-bottom: 16px;">Projected Business Impact</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 40px; height: 40px; border-radius: 8px; background: var(--color-primary); display: flex; align-items: center; justify-content: center; color: white;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="12 5 12 19"></polyline><polyline points="19 12 12 19 5 12"></polyline></svg>
+              </div>
+              <div>
+                <div style="font-weight: 700; font-size: 16px; color: var(--color-text-primary);">AED 1.2M</div>
+                <div style="font-size: 12px; color: var(--color-text-secondary);">Revenue at Risk</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 40px; height: 40px; border-radius: 8px; background: var(--color-primary); display: flex; align-items: center; justify-content: center; color: white;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+              </div>
+              <div>
+                <div style="font-weight: 700; font-size: 16px; color: var(--color-text-primary);">-4.8%</div>
+                <div style="font-size: 12px; color: var(--color-text-secondary);">Margin Exposure</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 40px; height: 40px; border-radius: 8px; background: var(--color-border); display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <div>
+                <div style="font-weight: 700; font-size: 16px; color: var(--color-text-primary);">18%</div>
+                <div style="font-size: 12px; color: var(--color-text-secondary);">Inventory Opportunity</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 40px; height: 40px; border-radius: 8px; background: var(--color-primary); display: flex; align-items: center; justify-content: center; color: white;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.5 2H2v11.5c0 6.35 5.15 11.5 11.5 11.5S25 19.85 25 13.5 19.85 2 13.5 2z"></path><polygon points="9.5 9 14.5 14 20.5 8 16 3"></polygon></svg>
+              </div>
+              <div>
+                <div style="font-weight: 700; font-size: 16px; color: var(--color-text-primary);">AED 860K</div>
+                <div style="font-size: 12px; color: var(--color-text-secondary);">Recommended Recovery</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommended Actions -->
+        <div class="bot-section" style="margin-top: 32px;">
+          <div class="bot-section-title" style="font-size: 16px; margin-bottom: 16px;">Recommended Actions</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div style="display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--color-border); border-radius: 12px; padding: 16px;">
+              <div style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></div>
+              <div>
+                <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: var(--color-text-primary);">Pricing</div>
+                <div style="font-size: 12px; color: var(--color-text-secondary);">Launch targeted UAE price defense on selected SKU</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--color-border); border-radius: 12px; padding: 16px;">
+              <div style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+              <div>
+                <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: var(--color-text-primary);">Inventory</div>
+                <div style="font-size: 12px; color: var(--color-text-secondary);">Bundle Saudi overstock with loyalty offer</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--color-border); border-radius: 12px; padding: 16px;">
+              <div style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></div>
+              <div>
+                <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: var(--color-text-primary);">Campaign</div>
+                <div style="font-size: 12px; color: var(--color-text-secondary);">Shift messaging to "Limited-Time Value"</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--color-border); border-radius: 12px; padding: 16px;">
+              <div style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+              <div>
+                <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: var(--color-text-primary);">Operations</div>
+                <div style="font-size: 12px; color: var(--color-text-secondary);">Notify regional commercial teams</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="analysis-card" id="new-scenario-card" style="display: none;">
+        <h2 class="bot-response-title" style="margin-bottom: 8px;">GCC Weekend Promotion Impact Assessment</h2>
+        <div style="color: var(--color-text-secondary); font-size: 13px; margin-bottom: 24px;">Analysis Updated - Generated by Super Agent & Specialist Agents</div>
+        
+        <div style="display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap;">
+          <span style="background: var(--color-primary-light); color: var(--color-primary); padding: 4px 12px; border-radius: 16px; font-size: 12px; font-weight: 600;">Markets Assessed: UAE - Saudi Arabia - Qatar</span>
+          <span style="background: var(--color-primary-light); color: var(--color-primary); padding: 4px 12px; border-radius: 16px; font-size: 12px; font-weight: 600;">Scenario: Competitor Promotion Extended Through Weekend</span>
+          <span style="background: var(--color-primary-light); color: var(--color-primary); padding: 4px 12px; border-radius: 16px; font-size: 12px; font-weight: 600;">Confidence Score: 87%</span>
+        </div>
+
+        <div class="bot-section">
+          <div class="bot-section-title">
+            <div style="background: var(--color-primary); color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-right: 8px;">1</div>
+            Executive Summary
+          </div>
+          <p style="color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 12px;">A competitor has extended a 14% price reduction on a top-selling campaign SKU, increasing competitive pressure across GCC markets.</p>
+          <p style="color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 12px;">Updated analysis indicates elevated conversion risk in UAE, while excess inventory in Saudi Arabia creates an opportunity to recover demand through targeted bundling.</p>
+          <p style="color: var(--color-text-secondary); line-height: 1.6;">Based on cross-agent simulations, a selective regional response is recommended over a full price match.</p>
+        </div>
+
+        <div class="bot-section">
+          <div class="bot-section-title">
+            <div style="background: var(--color-primary); color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-right: 8px;">2</div>
+            What Happened?
+          </div>
+          <div class="bot-subsection-title">Key Developments</div>
+          <ul class="bot-list">
+            <li>Competitor promotion extended through the weekend</li>
+            <li>Qatar restock completed successfully last week</li>
+            <li>UAE conversion declining among price-sensitive customers</li>
+            <li>Saudi inventory surplus creates bundling opportunity</li>
+            <li>Campaign launch window overlaps with competitor activity</li>
+          </ul>
+          <div class="bot-subsection-title" style="margin-top: 16px;">Sources</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Competitor Advertisement</span>
+            <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Qatar Restock Data</span>
+            <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Campaign Calendar</span>
+            <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Demand Forecast</span>
+            <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Inventory Feed</span>
+          </div>
+        </div>
+
+        <div class="bot-section">
+          <div class="bot-section-title">
+            <div style="background: var(--color-primary); color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-right: 8px;">3</div>
+            Why It Matters
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+            <!-- Agent 1 -->
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 13px; font-weight: 600; color: var(--color-primary);">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="18" y="3" width="4" height="18"></rect><rect x="10" y="8" width="4" height="13"></rect><rect x="2" y="13" width="4" height="8"></rect></svg>
+                Pricing & Demand Agent
+              </div>
+              <ul class="bot-list" style="padding-left: 16px; font-size: 13px;">
+                <li>Competitor reduced price by 14% on a top-selling campaign SKU</li>
+                <li>UAE e-commerce conversion is dropping among price-sensitive customers</li>
+                <li>Loyalty customers are likely to respond to a limited-time value offer</li>
+              </ul>
+            </div>
+            <!-- Agent 2 -->
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 13px; font-weight: 600; color: var(--color-primary);">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                Inventory Agent
+              </div>
+              <ul class="bot-list" style="padding-left: 16px; font-size: 13px;">
+                <li>Saudi has excess stock that can support a regional bundle</li>
+                <li>Inventory opportunity identified across affected product categories</li>
+              </ul>
+            </div>
+            <!-- Agent 3 -->
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 13px; font-weight: 600; color: var(--color-primary);">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-5v12L3 13v-2z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
+                Campaign Agent
+              </div>
+              <ul class="bot-list" style="padding-left: 16px; font-size: 13px;">
+                <li>Weekend campaign needs to be adjusted before launch</li>
+                <li>Current messaging may not effectively address competitor pressure</li>
+              </ul>
+            </div>
+            <!-- Agent 4 -->
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 13px; font-weight: 600; color: var(--color-primary);">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.5 2H2v11.5c0 6.35 5.15 11.5 11.5 11.5S25 19.85 25 13.5 19.85 2 13.5 2z"></path><polygon points="9.5 9 14.5 14 20.5 8 16 3"></polygon></svg>
+                Super Agent
+              </div>
+              <ul class="bot-list" style="padding-left: 16px; font-size: 13px;">
+                <li>Full price match is not recommended</li>
+                <li>Selective regional response is recommended</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bot-subsection-title">Sources</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Pricing Intelligence</span>
+            <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Demand Forecast</span>
+            <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Inventory Signals</span>
+            <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Campaign Calendar</span>
+          </div>
+        </div>
+
+        <div class="bot-section">
+          <div class="bot-section-title">
+            <div style="background: var(--color-primary); color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-right: 8px;">4</div>
+            Response Scenario Comparison
+          </div>
+          <div class="bot-subsection-title">Scenario Outcomes</div>
+          <table class="agent-table" style="margin-bottom: 24px;">
+            <thead>
+              <tr>
+                <th>Scenario</th>
+                <th>Revenue Recovery</th>
+                <th>Margin Impact</th>
+                <th>Risk Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No Action</td>
+                <td>AED 0</td>
+                <td>-8%</td>
+                <td>High</td>
+              </tr>
+              <tr>
+                <td>Full Price Match</td>
+                <td>AED 960K</td>
+                <td>-12%</td>
+                <td>High</td>
+              </tr>
+              <tr>
+                <td>Regional Response</td>
+                <td>AED 860K</td>
+                <td>-4.8%</td>
+                <td>Low</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="bot-subsection-title">Response Scenario Comparison</div>
+          <div class="bot-chart-container" style="border: 1px solid var(--color-border); border-radius: 12px; padding: 24px;">
+            <div class="chart-mockup" style="height: 200px;">
+              <div class="chart-y-axis-left">
+                <span>1.0M</span><span>750K</span><span>500K</span><span>250K</span><span>0</span>
+                <div style="position:absolute; left:-40px; top:50%; transform:translateY(-50%) rotate(-90deg); white-space:nowrap; font-size:10px;">Revenue Recovery (AED)</div>
+              </div>
+              
+              <!-- Custom Chart SVG matching the image -->
+              <svg class="chart-line-svg" viewBox="0 0 600 200" preserveAspectRatio="none" style="z-index: 10;">
+                <!-- Margin Line -->
+                <polyline points="150,100 350,140 550,68" fill="none" stroke="#60A5FA" stroke-width="2" />
+                <circle cx="150" cy="100" r="4" fill="#60A5FA" />
+                <circle cx="350" cy="140" r="4" fill="#60A5FA" />
+                <circle cx="550" cy="68" r="4" fill="#60A5FA" />
+                <text x="150" y="85" text-anchor="middle" fill="#60A5FA" font-size="12">-8%</text>
+                <text x="350" y="125" text-anchor="middle" fill="#60A5FA" font-size="12">-12%</text>
+                <text x="565" y="65" text-anchor="start" fill="#60A5FA" font-size="12">-4.8%</text>
+              </svg>
+
+              <!-- Bars for Revenue -->
+              <div class="chart-bar-group" style="position: absolute; bottom: 0; left: 25%; transform: translateX(-50%); width: 60px;">
+                <div class="chart-bar" style="height: 5px; background-color: var(--color-primary); width: 100%;"></div>
+                <div style="position:absolute; top:-25px; width:100%; text-align:center; font-size:12px; font-weight:600;">AED 0</div>
+                <div class="chart-x-axis" style="bottom: -30px; width:120px; left:-30px;">No Action</div>
+              </div>
+              <div class="chart-bar-group" style="position: absolute; bottom: 0; left: 58.33%; transform: translateX(-50%); width: 60px;">
+                <div class="chart-bar" style="height: 180px; background-color: var(--color-primary); width: 100%;"></div>
+                <div style="position:absolute; top:-25px; width:100%; text-align:center; font-size:12px; font-weight:600;">AED 960K</div>
+                <div class="chart-x-axis" style="bottom: -30px; width:120px; left:-30px;">Full Price Match</div>
+              </div>
+              <div class="chart-bar-group" style="position: absolute; bottom: 0; left: 91.66%; transform: translateX(-50%); width: 60px;">
+                <div class="chart-bar" style="height: 160px; background-color: var(--color-primary); width: 100%;"></div>
+                <div style="position:absolute; top:-25px; width:100%; text-align:center; font-size:12px; font-weight:600;">AED 860K</div>
+                <div class="chart-x-axis" style="bottom: -30px; width:120px; left:-30px;">Regional Response</div>
+              </div>
+
+              <div class="chart-y-axis-right">
+                <span>0%</span><span>-4%</span><span>-8%</span><span>-12%</span><span>-16%</span>
+                <div style="position:absolute; right:-40px; top:50%; transform:translateY(-50%) rotate(90deg); white-space:nowrap; font-size:10px;">Margin Exposure (%)</div>
+              </div>
+              
+              <div class="bot-chart-legend" style="bottom: -60px; display: flex; justify-content: center; gap: 24px;">
+                <div><span style="background:var(--color-primary); width:12px; height:12px; display:inline-block; margin-right:8px;"></span>Revenue Recovery (AED)</div>
+                <div><span style="background:#60A5FA; width:12px; height:2px; display:inline-block; margin-right:8px; vertical-align:middle;"></span><span style="display:inline-block; width:6px; height:6px; background:#60A5FA; border-radius:50%; margin-left:-11px; margin-right:5px; vertical-align:middle;"></span>Margin Exposure (%)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bot-section" style="margin-top: 80px;">
+          <div class="bot-section-title">
+            <div style="background: var(--color-primary); color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-right: 8px;">5</div>
+            Campaign Impact
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+            <div>
+              <div class="bot-subsection-title">Campaign Assessment</div>
+              <ul class="bot-list">
+                <li>Weekend campaign vulnerable to competitor pricing pressure</li>
+                <li>Existing messaging lacks value differentiation</li>
+                <li>Saudi loyalty bundle can improve campaign performance</li>
+                <li>Qatar campaign expected to remain stable</li>
+              </ul>
+              <div class="bot-subsection-title" style="margin-top: 16px;">Sources</div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Campaign Performance</span>
+                <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Marketing Calendar</span>
+                <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Audience Segmentation</span>
+              </div>
+            </div>
+            <div>
+              <div class="bot-subsection-title">Affected Campaigns</div>
+              <table class="agent-table">
+                <thead>
+                  <tr><th>Campaign</th><th>Impact</th><th>Action Required</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>UAE Summer Promotion</td><td>High</td><td>Adjust Offer Strategy</td></tr>
+                  <tr><td>Saudi Loyalty Campaign</td><td>Medium</td><td>Add Bundle Incentive</td></tr>
+                  <tr><td>Qatar Brand Campaign</td><td>Low</td><td>Monitor Performance</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="bot-section">
+          <div class="bot-section-title">
+            <div style="background: var(--color-primary); color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-right: 8px;">6</div>
+            Regional Response
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+            <table class="agent-table">
+              <thead>
+                <tr><th>Market</th><th>Recommended Action</th><th>Priority</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>UAE</td><td>Targeted price defense on selected SKU</td><td>High</td></tr>
+                <tr><td>Saudi Arabia</td><td>Bundle overstock with loyalty offer</td><td>High</td></tr>
+                <tr><td>Qatar</td><td>Maintain campaign plan and monitor</td><td>Medium</td></tr>
+              </tbody>
+            </table>
+            <div>
+              <div class="bot-subsection-title">Supporting Actions</div>
+              <ul class="bot-list">
+                <li>Shift campaign messaging to "Limited-Time Value"</li>
+                <li>Prioritize loyalty customer segments</li>
+                <li>Reallocate inventory based on regional demand</li>
+                <li>Notify regional commercial teams</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bot-section">
+          <div class="bot-section-title">
+            <div style="background: var(--color-primary); color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-right: 8px;">7</div>
+            Risks & Assumptions
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+            <div>
+              <div class="bot-subsection-title">Risk Indicators</div>
+              <table class="agent-table">
+                <thead>
+                  <tr><th>Risk</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Revenue Leakage</td><td><span style="color:#EF4444; font-size:18px; line-height:0; margin-right:8px;">●</span>High</td></tr>
+                  <tr><td>Margin Pressure</td><td><span style="color:#EAB308; font-size:18px; line-height:0; margin-right:8px;">●</span>Medium</td></tr>
+                  <tr><td>Campaign Underperformance</td><td><span style="color:#EAB308; font-size:18px; line-height:0; margin-right:8px;">●</span>Medium</td></tr>
+                  <tr><td>Inventory Constraints</td><td><span style="color:#22C55E; font-size:18px; line-height:0; margin-right:8px;">●</span>Low</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <div class="bot-subsection-title">Assumptions</div>
+              <ul class="bot-list">
+                <li>Competitor promotion remains active through the weekend</li>
+                <li>Qatar inventory remains available as forecasted</li>
+                <li>Demand elasticity remains consistent with previous campaigns</li>
+                <li>Loyalty offer adoption follows historical trends</li>
+              </ul>
+              <div class="bot-subsection-title" style="margin-top: 16px;">Sources</div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Competitor Intelligence</span>
+                <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Inventory Forecast</span>
+                <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Historical Promotion Performance</span>
+                <span style="border: 1px solid var(--color-border); padding: 4px 12px; border-radius: 16px; font-size: 12px; color: var(--color-primary);">Regional Sales Data</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bot-section">
+          <div class="bot-section-title">
+            <div style="background: var(--color-primary); color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-right: 8px;">8</div>
+            Recommended Next Actions
+          </div>
+          <div class="bot-prompts" style="margin-top: 16px;">
+            <div class="bot-prompt-item">
+              <div>
+                <div style="font-weight: 600; font-size: 15px; color: var(--color-text-primary); margin-bottom: 4px;">Generate Commercial Director One-Pager</div>
+                <div style="font-size: 13px; color: var(--color-text-secondary);">Executive-ready summary with recommendations and projections</div>
+              </div>
+              <button class="btn-proceed" style="background: none; color: var(--color-text-secondary); font-size: 18px;">&gt;</button>
+            </div>
+            <div class="bot-prompt-item">
+              <div>
+                <div style="font-weight: 600; font-size: 15px; color: var(--color-text-primary); margin-bottom: 4px;">Run 14-Day Promotion Simulation</div>
+                <div style="font-size: 13px; color: var(--color-text-secondary);">Assess impact if competitor extends promotion further</div>
+              </div>
+              <button class="btn-proceed" style="background: none; color: var(--color-text-secondary); font-size: 18px;">&gt;</button>
+            </div>
+            <div class="bot-prompt-item">
+              <div>
+                <div style="font-weight: 600; font-size: 15px; color: var(--color-text-primary); margin-bottom: 4px;">Build Channel Activation Plan</div>
+                <div style="font-size: 13px; color: var(--color-text-secondary);">Retail, CRM, Paid Media, Loyalty</div>
+              </div>
+              <button class="btn-proceed" style="background: none; color: var(--color-text-secondary); font-size: 18px;">&gt;</button>
+            </div>
+            <div class="bot-prompt-item">
+              <div>
+                <div style="font-weight: 600; font-size: 15px; color: var(--color-text-primary); margin-bottom: 4px;">Create Executive Leadership Brief</div>
+                <div style="font-size: 13px; color: var(--color-text-secondary);">Board-ready decision summary</div>
+              </div>
+              <button class="btn-proceed" style="background: none; color: var(--color-text-secondary); font-size: 18px;">&gt;</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bot-actions-row" style="margin-top: 32px;">
+          <div class="bot-avatar-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 8v4l3 3"></path></svg>
+          </div>
+          <button class="action-icon-btn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></button>
+          <button class="action-icon-btn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path></svg></button>
+          <button class="action-icon-btn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+          <button class="action-icon-btn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></button>
+        </div>
+      </div> <!-- /new-scenario-card -->
+      <!-- Original Scenario Card Template -->
+      <div class="analysis-card" id="original-scenario-card" style="display: none;">
+        <h2 class="bot-response-title">Here is the recommended GCC campaign adjustment plan</h2>
+        
+        <div class="bot-section">
+          <div class="bot-section-title">🚨 Disruption Detected</div>
+          <ul class="bot-list">
+            <li>Competitor reduced pricing by <strong>20%</strong></li>
+            <li>Dubai stock at <strong>12%</strong> (&lt;6 days coverage)</li>
+            <li>Early UAE Gen Z conversion softening</li>
+          </ul>
+          <p><strong>Objective:</strong> Stabilize revenue, prevent stock-outs, and preserve premium brand positioning across GCC.</p>
+        </div>
+
+        <div class="bot-section">
+          <div class="bot-section-title">🔎 Cross-Agent Synthesis</div>
+          <div class="bot-subsection-title">🌍 Market Intelligence Agent</div>
+          <ul class="bot-list">
+            <li>Identified high short-term price sensitivity in UAE Gen Z</li>
+            <li>No significant sentiment pressure in KSA/Qatar</li>
+            <li>Competitor move classified as tactical (not structural)</li>
+          </ul>
+          <p><em>Insight: Response should be localized, not GCC-wide.</em></p>
+        </div>
+
+        <div class="bot-section">
+          <div class="bot-section-title">📊 Demand & Pricing Strategist</div>
+          <p>3 scenarios simulated:</p>
+          <table class="bot-table">
+            <thead>
+              <tr>
+                <th>Scenario</th>
+                <th>Revenue</th>
+                <th>Margin</th>
+                <th>Stock-Out Risk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No action</td>
+                <td style="font-size:18px; font-weight:bold;">↓</td>
+                <td><span class="badge badge-green">Stable</span></td>
+                <td><span class="badge badge-red">High</span></td>
+              </tr>
+              <tr>
+                <td>Match -20%</td>
+                <td><span style="font-size:18px; font-weight:bold;">↑</span><br><span style="font-size:12px; color:var(--color-text-secondary);">short-term</span></td>
+                <td style="font-size:18px; font-weight:bold; letter-spacing:4px;">↓↓↓</td>
+                <td><span class="badge badge-yellow">Critical</span></td>
+              </tr>
+              <tr>
+                <td>Tactical -10% UAE</td>
+                <td>Stabilized</td>
+                <td style="font-size:18px; font-weight:bold;">↓</td>
+                <td><span class="badge badge-green-light">Reduced</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    </div> <!-- /analysis-scroll-area -->
+
+    <div class="analysis-bottom-area">
+      <!-- Chat Input Container -->
+      <div class="chat-input-container">
+        <div class="chat-previews" id="chat-previews"></div>
+        <div class="chat-input-row">
+          <div class="chat-attach" id="btn-attach">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+          </div>
+          <textarea class="chat-input" id="chat-input" placeholder="Ask anything" rows="1"></textarea>
+          <button class="chat-send" id="btn-send">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </div>
+      </div>
+      <input type="file" id="file-input" style="display: none;" multiple>
+    </div>
+
+  </main>
+
+</div>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="agent-modal-backdrop" style="display: none;"></div>
+<div class="agent-modal" id="agent-modal" style="display: none;">
+  <div class="agent-modal-header">
+    <div class="agent-modal-title">Demand & Sales Projection Update</div>
+    <button class="agent-modal-close" id="modal-close">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
+  <div class="agent-modal-content">
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Summary</div>
+      <p>Updated revenue and demand forecasts using competitor pricing, conversion trends, inventory availability, and loyalty segment data.</p>
+    </div>
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Key Inputs</div>
+      <table class="agent-table">
+        <thead><tr><th>Source</th><th>Insight</th></tr></thead>
+        <tbody>
+          <tr><td>Competitor Pricing</td><td>14% price gap</td></tr>
+          <tr><td>UAE E-commerce</td><td>Conversion ↓ 11%</td></tr>
+          <tr><td>Saudi Inventory</td><td>Stock ↑ 18%</td></tr>
+          <tr><td>CRM</td><td>Loyalty offer eligible</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Impact</div>
+      <table class="agent-table">
+        <thead><tr><th>Metric</th><th>Updated</th></tr></thead>
+        <tbody>
+          <tr><td>Revenue at Risk</td><td>AED 1.2M</td></tr>
+          <tr><td>Margin Exposure</td><td>-4.8%</td></tr>
+          <tr><td>Recovery Potential</td><td>AED 860K</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Agent Actions</div>
+      <div class="agent-actions-list">
+        <div>Pricing & Demand Agent → Updated demand forecasts</div>
+        <div>Inventory Agent → Validated stock availability</div>
+        <div>Super Agent → Generated revised projections</div>
+      </div>
+    </div>
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Outcome</div>
+      <div class="agent-outcome">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span style="color: #22C55E; font-weight: 500;">Updated business impact model generated</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Side Drawer -->
+<div class="side-drawer" id="agent-drawer">
+  <div class="drawer-header">
+    <div class="drawer-title">Agent Reasoning Flow</div>
+    <button class="drawer-close" id="drawer-close">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
+  
+  <div class="drawer-section">
+    <div class="drawer-section-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <span style="color: var(--color-primary); font-weight: 600;">Agents in Action</span>
+      </div>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </div>
+    
+    <div class="drawer-agents">
+      <div class="agent-card-side" id="drawer-agent-0">
+        <div class="agent-icon" style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="18" y="3" width="4" height="18"></rect><rect x="10" y="8" width="4" height="13"></rect><rect x="2" y="13" width="4" height="8"></rect></svg></div>
+        <div class="agent-info">
+          <div class="agent-name">Pricing & Demand Agent</div>
+          <div class="agent-desc">Competitor reduced price by 14% on a top-selling campaign SKU.</div>
+        </div>
+      </div>
+      <div class="agent-card-side" id="drawer-agent-1">
+        <div class="agent-icon" style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div>
+        <div class="agent-info">
+          <div class="agent-name">Inventory Agent</div>
+          <div class="agent-desc">Saudi has excess stock that can support a regional bundle.</div>
+        </div>
+      </div>
+      <div class="agent-card-side" id="drawer-agent-2">
+        <div class="agent-icon" style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-5v12L3 13v-2z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg></div>
+        <div class="agent-info">
+          <div class="agent-name">Campaign Agent</div>
+          <div class="agent-desc">Weekend campaign needs to be adjusted before launch.</div>
+        </div>
+      </div>
+      <div class="agent-card-side" id="drawer-agent-3">
+        <div class="agent-icon" style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.5 2H2v11.5c0 6.35 5.15 11.5 11.5 11.5S25 19.85 25 13.5 19.85 2 13.5 2z"></path><polygon points="9.5 9 14.5 14 20.5 8 16 3"></polygon></svg></div>
+        <div class="agent-info">
+          <div class="agent-name">Super Agent</div>
+          <div class="agent-desc">Full price match is not recommended. Selective regional response is recommended.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawer-section" style="margin-top: 24px;">
+    <div class="drawer-section-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--color-primary)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        <span style="color: var(--color-primary); font-weight: 600;">Thinking Steps</span>
+      </div>
+    </div>
+    <div class="drawer-timeline" id="drawer-timeline"></div>
+  </div>
+</div>
+
+<script>
+const stepsData = [
+    {
+      title: "Initializing Analysis",
+      subtitle: "Understanding the request and validating inputs",
+      desc: "Reviewing the scenario assumptions, attached competitor advertisement, campaign context, and regional inventory signals.",
+      sections: [
+        {
+          heading: "Request Validation",
+          content: `<ul class="bot-list">
+            <li>Weekend promotion extension identified as primary scenario change</li>
+            <li>Qatar inventory restock included in analysis scope</li>
+            <li>Commercial Director one-pager requested as final deliverable</li>
+          </ul>`
+        },
+        {
+          heading: "Data Sources Identified",
+          content: `<ul class="bot-list">
+            <li>Competitor advertisement</li>
+            <li>Regional inventory systems</li>
+            <li>Demand forecasting models</li>
+            <li>Campaign planning workspace</li>
+          </ul>`
+        },
+        {
+          heading: "Key Insight",
+          content: `<p style="color:var(--color-text-secondary); line-height:1.5;">The request impacts both pricing strategy and inventory allocation decisions, requiring cross-agent analysis before recommendations can be generated.</p>`
+        },
+        {
+          heading: "Recommendation",
+          content: `<div class="agent-outcome">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="color: #22C55E; font-weight: 500;">Proceed with scenario recalculation using updated promotion assumptions and latest inventory data.</span>
+          </div>`
+        }
+      ]
+    },
+    {
+      title: "Gathering Insights",
+      subtitle: "Analyzing market, pricing, and inventory signals",
+      desc: "Collecting competitive, commercial, and operational insights across UAE, Saudi Arabia, and Qatar.",
+      sections: [
+        {
+          heading: "Competitor Signals",
+          content: `<ul class="bot-list">
+            <li>Competitor price gap detected at 14%</li>
+            <li>Weekend promotion remains active</li>
+            <li>Promotional pressure concentrated on hero campaign SKU</li>
+          </ul>`
+        },
+        {
+          heading: "Commercial Signals",
+          content: `<ul class="bot-list">
+            <li>UAE conversion down 11%</li>
+            <li>Loyalty audience shows highest response potential</li>
+            <li>Price-sensitive segments most affected</li>
+          </ul>`
+        },
+        {
+          heading: "Inventory Signals",
+          content: `<ul class="bot-list">
+            <li>Saudi inventory 18% above plan</li>
+            <li>Qatar restock completed successfully</li>
+            <li>Regional inventory position remains stable</li>
+          </ul>`
+        },
+        {
+          heading: "Key Insight",
+          content: `<p style="color:var(--color-text-secondary); line-height:1.5;">Revenue pressure is highest in UAE, while Saudi inventory surplus creates an opportunity to recover demand through targeted offers.</p>`
+        },
+        {
+          heading: "Recommendation",
+          content: `<div class="agent-outcome">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="color: #22C55E; font-weight: 500;">Focus analysis on selective regional interventions rather than broad pricing changes.</span>
+          </div>`
+        }
+      ]
+    },
+    {
+      title: "Running Scenarios",
+      subtitle: "Evaluating projected business impact",
+      desc: "Simulating pricing, demand, and inventory outcomes under multiple response strategies.",
+      sections: [
+        {
+          heading: "Scenarios Evaluated",
+          content: `<ul class="bot-list check-list">
+            <li>No Action</li>
+            <li>Full Price Match</li>
+            <li>Regional Response Strategy</li>
+          </ul>`
+        },
+        {
+          heading: "Projected Outcomes",
+          content: `<table class="agent-table">
+            <thead><tr><th>Scenario</th><th>Revenue Impact</th><th>Margin Impact</th></tr></thead>
+            <tbody>
+              <tr><td>No Action</td><td><span class="badge badge-red">High Risk</span></td><td><span class="badge badge-green">Stable</span></td></tr>
+              <tr><td>Full Match</td><td><span class="badge badge-green-light">Recovery</span></td><td><span class="badge badge-red">Margin Erosion</span></td></tr>
+              <tr><td>Regional Response</td><td><span class="badge badge-green-light">Recovery</span></td><td><span class="badge badge-green">Within Target</span></td></tr>
+            </tbody>
+          </table>`
+        },
+        {
+          heading: "Business Impact",
+          content: `<ul class="bot-list">
+            <li>Revenue at Risk: <strong>AED 1.2M</strong></li>
+            <li>Margin Exposure: <strong>-4.8%</strong></li>
+            <li>Recovery Potential: <strong>AED 860K</strong></li>
+          </ul>`
+        },
+        {
+          heading: "Key Insight",
+          content: `<p style="color:var(--color-text-secondary); line-height:1.5;">A full price match improves competitiveness but pushes margins below acceptable thresholds.</p>`
+        },
+        {
+          heading: "Recommendation",
+          content: `<div class="agent-outcome">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="color: #22C55E; font-weight: 500;">Proceed with selective market actions that protect revenue while maintaining profitability.</span>
+          </div>`
+        }
+      ]
+    },
+    {
+      title: "Generating Recommendations",
+      subtitle: "Preparing updated response strategy",
+      desc: "Combining agent findings into a unified commercial response plan.",
+      sections: [
+        {
+          heading: "Recommended Market Actions",
+          content: `<div style="margin-bottom: 12px;"><strong>🇦🇪 UAE</strong><br><span style="color:var(--color-text-secondary);">Targeted price defense on selected SKU</span></div>
+                    <div style="margin-bottom: 12px;"><strong>🇸🇦 Saudi Arabia</strong><br><span style="color:var(--color-text-secondary);">Bundle excess inventory with loyalty offer</span></div>
+                    <div><strong>🇶🇦 Qatar</strong><br><span style="color:var(--color-text-secondary);">Maintain current campaign strategy</span></div>`
+        },
+        {
+          heading: "Campaign Actions",
+          content: `<ul class="bot-list">
+            <li>Shift messaging to "Limited-Time Value"</li>
+            <li>Prioritize loyalty customer segments</li>
+            <li>Adjust weekend campaign launch positioning</li>
+          </ul>`
+        },
+        {
+          heading: "Key Insight",
+          content: `<p style="color:var(--color-text-secondary); line-height:1.5;">Regional optimization delivers better commercial outcomes than a blanket discount strategy.</p>`
+        },
+        {
+          heading: "Recommendation",
+          content: `<div class="agent-outcome">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="color: #22C55E; font-weight: 500;">Activate market-specific actions and notify regional commercial teams for execution.</span>
+          </div>`
+        }
+      ]
+    }
+  ];
+
+// This script will be used to inject the new JS into analysis.html
+const agentsData = [
+  {
+    title: "Pricing & Demand Agent",
+    icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="18" y="3" width="4" height="18"></rect><rect x="10" y="8" width="4" height="13"></rect><rect x="2" y="13" width="4" height="8"></rect></svg>`,
+    subtitle: "Evaluating pricing pressure and customer demand",
+    desc: "Analyzing competitor pricing activity, customer conversion behavior, and demand elasticity across GCC markets.",
+    sections: [
+      {
+        heading: "Pricing Signals",
+        content: `<ul class="bot-list">
+          <li>Competitor promotion detected with a 14% price gap</li>
+          <li>Promotional activity concentrated on hero campaign SKU</li>
+          <li>Weekend offer expected to increase competitive pressure</li>
+        </ul>`
+      },
+      {
+        heading: "Demand Signals",
+        content: `<ul class="bot-list">
+          <li>UAE e-commerce conversion down 11%</li>
+          <li>Price-sensitive customers showing highest churn risk</li>
+          <li>Loyalty segment remains highly responsive to value offers</li>
+        </ul>`
+      },
+      {
+        heading: "Agent Contribution",
+        content: `<ul class="bot-list">
+          <li>Calculated revenue exposure</li>
+          <li>Updated demand forecasts</li>
+          <li>Modeled customer response scenarios</li>
+        </ul>`
+      },
+      {
+        heading: "Key Insight",
+        content: `<p style="color:var(--color-text-secondary); line-height:1.5;">Conversion decline is primarily driven by pricing pressure rather than product preference.</p>`
+      },
+      {
+        heading: "Recommendation",
+        content: `<div class="agent-outcome">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="color: #22C55E; font-weight: 500;">Deploy targeted price defense on selected UAE SKU and activate loyalty-based offers.</span>
+        </div>`
+      }
+    ]
+  },
+  {
+    title: "Inventory Agent",
+    icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>`,
+    subtitle: "Assessing inventory readiness and fulfillment capacity",
+    desc: "Reviewing stock availability, regional inventory distribution, and replenishment status.",
+    sections: [
+      {
+        heading: "Inventory Signals",
+        content: `<ul class="bot-list">
+          <li>Saudi inventory currently 18% above plan</li>
+          <li>Qatar restock completed successfully last week</li>
+          <li>No supply constraints identified</li>
+        </ul>`
+      },
+      {
+        heading: "Regional Assessment",
+        content: `<ul class="bot-list">
+          <li>Saudi inventory can support promotional bundles</li>
+          <li>Qatar inventory position remains healthy</li>
+          <li>UAE inventory levels remain within target thresholds</li>
+        </ul>`
+      },
+      {
+        heading: "Agent Contribution",
+        content: `<ul class="bot-list">
+          <li>Validated inventory availability</li>
+          <li>Calculated inventory opportunity</li>
+          <li>Evaluated fulfillment risk</li>
+        </ul>`
+      },
+      {
+        heading: "Key Insight",
+        content: `<p style="color:var(--color-text-secondary); line-height:1.5;">Existing Saudi inventory can be leveraged to recover demand without introducing additional stock risk.</p>`
+      },
+      {
+        heading: "Recommendation",
+        content: `<div class="agent-outcome">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="color: #22C55E; font-weight: 500;">Bundle excess inventory with loyalty incentives to increase sell-through.</span>
+        </div>`
+      }
+    ]
+  },
+  {
+    title: "Campaign Agent",
+    icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-5v12L3 13v-2z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>`,
+    subtitle: "Reviewing campaign effectiveness and launch readiness",
+    desc: "Analyzing campaign timing, messaging strategy, and market alignment.",
+    sections: [
+      {
+        heading: "Campaign Signals",
+        content: `<ul class="bot-list">
+          <li>Weekend campaign launch overlaps with competitor promotion</li>
+          <li>Existing campaign messaging lacks value differentiation</li>
+          <li>Campaign schedule remains adjustable</li>
+        </ul>`
+      },
+      {
+        heading: "Market Assessment",
+        content: `<ul class="bot-list">
+          <li>UAE campaign most affected by pricing pressure</li>
+          <li>Saudi campaign can incorporate bundle messaging</li>
+          <li>Qatar campaign performance expected to remain stable</li>
+        </ul>`
+      },
+      {
+        heading: "Agent Contribution",
+        content: `<ul class="bot-list">
+          <li>Assessed campaign risk</li>
+          <li>Identified messaging gaps</li>
+          <li>Generated campaign adjustment recommendations</li>
+        </ul>`
+      },
+      {
+        heading: "Key Insight",
+        content: `<p style="color:var(--color-text-secondary); line-height:1.5;">Current campaign positioning does not sufficiently address competitor discount messaging.</p>`
+      },
+      {
+        heading: "Recommendation",
+        content: `<div class="agent-outcome">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="color: #22C55E; font-weight: 500;">Shift campaign messaging toward "Limited-Time Value" and regional relevance.</span>
+        </div>`
+      }
+    ]
+  },
+  {
+    title: "Super Agent",
+    icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.5 2H2v11.5c0 6.35 5.15 11.5 11.5 11.5S25 19.85 25 13.5 19.85 2 13.5 2z"></path><polygon points="9.5 9 14.5 14 20.5 8 16 3"></polygon></svg>`,
+    subtitle: "Coordinating analysis and generating final strategy",
+    desc: "Consolidating findings from pricing, inventory, and campaign agents to determine the optimal commercial response.",
+    sections: [
+      {
+        heading: "Agent Coordination",
+        content: `<ul class="bot-list">
+          <li>Reviewed pricing impact assessment</li>
+          <li>Validated inventory recommendations</li>
+          <li>Evaluated campaign adjustments</li>
+          <li>Compared response scenarios</li>
+        </ul>`
+      },
+      {
+        heading: "Strategies Evaluated",
+        content: `<ul class="bot-list check-list">
+          <li>No Action</li>
+          <li>Full Price Match</li>
+          <li>Selective Regional Response</li>
+        </ul>`
+      },
+      {
+        heading: "Agent Contribution",
+        content: `<ul class="bot-list">
+          <li>Calculated business impact</li>
+          <li>Prioritized response actions</li>
+          <li>Generated final recommendation</li>
+        </ul>`
+      },
+      {
+        heading: "Key Insight",
+        content: `<p style="color:var(--color-text-secondary); line-height:1.5;">Full price matching improves competitiveness but reduces margins below acceptable thresholds.</p>`
+      },
+      {
+        heading: "Recommendation",
+        content: `<div class="agent-outcome">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="color: #22C55E; font-weight: 500;">Implement a selective regional response combining targeted pricing, inventory bundling, and campaign optimization.</span>
+        </div>`
+      }
+    ]
+  }
+];
+
+  const fileInput = document.getElementById('file-input');
+  const btnAttach = document.getElementById('btn-attach');
+  const chatPreviews = document.getElementById('chat-previews');
+  const chatInput = document.getElementById('chat-input');
+  const btnSend = document.getElementById('btn-send');
+  const scrollArea = document.getElementById('analysis-scroll-area');
+
+  let selectedFiles = [];
+
+  btnAttach.addEventListener('click', () => {
+    fileInput.click();
+  });
+
+  fileInput.addEventListener('change', (e) => {
+    const files = Array.from(e.target.files);
+    files.forEach(file => {
+      selectedFiles.push(file);
+      
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const previewItem = document.createElement('div');
+        previewItem.className = 'chat-preview-item';
+        
+        if (file.type.startsWith('image/')) {
+          previewItem.innerHTML = `
+            <img src="${ev.target.result}" alt="preview">
+            <div class="chat-preview-remove" data-name="${file.name}">✕</div>
+          `;
+        } else {
+          previewItem.innerHTML = `
+            <div class="preview-doc">
+              ${file.name.substring(0, 10)}...
+            </div>
+            <div class="chat-preview-remove" data-name="${file.name}">✕</div>
+          `;
+        }
+        chatPreviews.appendChild(previewItem);
+        chatPreviews.style.display = 'flex';
+        
+        previewItem.querySelector('.chat-preview-remove').addEventListener('click', function() {
+          const name = this.getAttribute('data-name');
+          selectedFiles = selectedFiles.filter(f => f.name !== name);
+          previewItem.remove();
+          if (selectedFiles.length === 0) {
+            chatPreviews.style.display = 'none';
+          }
+        });
+      };
+      reader.readAsDataURL(file);
+    });
+    fileInput.value = '';
+  });
+
+  const ongoingTexts = ["Initializing...", "Gathering insights...", "Running scenarios...", "Generating recommendations..."];
+  function simulateThinking(container, onComplete) {
+    const thinkingCard = document.createElement('div');
+    thinkingCard.className = 'thinking-card';
+    
+    const header = document.createElement('div');
+    header.className = 'thinking-header';
+    header.innerHTML = `
+      <div class="thinking-title" id="dynamic-thinking-title">Generating Output</div>
+      <button class="thinking-toggle" id="btn-show-steps">Show Steps</button>
+    `;
+    thinkingCard.appendChild(header);
+
+    const stepsContainer = document.createElement('div');
+    stepsContainer.className = 'thinking-steps';
+    thinkingCard.appendChild(stepsContainer);
+    
+    container.appendChild(thinkingCard);
+
+    // Side drawer setup
+    const agentDrawer = document.getElementById('agent-drawer');
+    const drawerCloseBtn = document.getElementById('drawer-close');
+    const drawerTimeline = document.getElementById('drawer-timeline');
+    
+    drawerTimeline.innerHTML = '';
+    
+    document.getElementById('btn-show-steps').addEventListener('click', () => {
+      agentDrawer.classList.add('open');
+      document.body.classList.add('drawer-open');
+      if(typeof drawerAnimationStarted !== 'undefined' && !drawerAnimationStarted) {
+         drawerAnimationStarted = true;
+         updateDrawerSteps();
+      }
+    });
+    drawerCloseBtn.addEventListener('click', () => {
+      agentDrawer.classList.remove('open');
+      document.body.classList.remove('drawer-open');
+    });
+    
+    stepsData.forEach((step, index) => {
+      const stepEl = document.createElement('div');
+      stepEl.className = 'thinking-step pending';
+      stepEl.dataset.index = index;
+      stepEl.innerHTML = `
+        <div class="thinking-step-icon"></div>
+        <div class="thinking-step-content">
+          <div class="thinking-step-title">${step.title}</div>
+          <div class="thinking-step-desc">${step.desc}</div>
+        </div>
+      `;
+      stepsContainer.appendChild(stepEl);
+
+      const drawerStep = document.createElement('div');
+      drawerStep.className = 'drawer-step';
+      drawerStep.id = `drawer-timeline-step-${index}`;
+      drawerStep.innerHTML = `
+        <div class="drawer-step-dot"></div>
+        <div class="drawer-step-content">
+          <div class="drawer-step-title">${step.title}</div>
+          <div class="drawer-step-desc">${step.desc}</div>
+        </div>
+      `;
+      drawerTimeline.appendChild(drawerStep);
+      
+      // Open steps modal on click
+      drawerStep.addEventListener('click', () => {
+        const modalBackdrop = document.getElementById('agent-modal-backdrop');
+        const modal = document.getElementById('agent-modal');
+        const modalTitle = document.querySelector('.agent-modal-title');
+        const modalContent = document.querySelector('.agent-modal-content');
+        
+        modalTitle.innerHTML = `<span>Agent Reasoning Flow</span>`;
+        
+        let html = `<div class="steps-accordion">`;
+        stepsData.forEach((data, i) => {
+           html += `
+            <div class="step-accordion-item ${i === 0 ? 'expanded' : ''}">
+              <div class="step-accordion-line"></div>
+              <div class="step-accordion-icon completed">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="step-accordion-content">
+                <div class="step-accordion-header" onclick="this.parentElement.parentElement.classList.toggle('expanded')">
+                  <div>
+                    <div class="step-accordion-title" style="font-size:16px; font-weight:700; color:var(--color-text-primary);">${i+1}. ${data.title}</div>
+                    <div class="step-accordion-subtitle" style="font-size:13px; color:var(--color-text-secondary); margin-top:4px;">${data.subtitle}</div>
+                  </div>
+                  <svg class="step-accordion-toggle" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="step-accordion-body">
+                  <p style="color:var(--color-text-secondary); line-height:1.5; margin-bottom:16px;">${data.desc}</p>
+                  ${data.sections.map(sec => `
+                    <div class="agent-modal-section" style="margin-bottom: 24px;">
+                      <div class="agent-modal-subtitle" style="font-size:14px; font-weight:600; color:var(--color-text-primary); margin-bottom:8px;">${sec.heading}</div>
+                      ${sec.content}
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+           `;
+        });
+        html += `</div>`;
+        
+        modalContent.innerHTML = html;
+        modalBackdrop.style.display = 'block';
+        modal.style.display = 'flex';
+      });
+      
+      const agentCard = document.getElementById(`drawer-agent-${index}`);
+      if(agentCard) agentCard.className = 'agent-card-side';
+    });
+
+    const checkIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+    const spinIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>`;
+
+    let currentStep = 0;
+    const dynamicTitle = document.getElementById('dynamic-thinking-title');
+
+    let drawerStepIdx = 0;
+    let drawerAnimationStarted = false;
+    
+    function updateDrawerSteps() {
+      if (drawerStepIdx > 0) {
+        const prevIdx = drawerStepIdx - 1;
+        const drawerStep = document.getElementById(`drawer-timeline-step-${prevIdx}`);
+        if(drawerStep) drawerStep.className = 'drawer-step completed';
+        const agentCard = document.getElementById(`drawer-agent-${prevIdx}`);
+        if(agentCard) agentCard.className = 'agent-card-side completed';
+      }
+      
+      if (drawerStepIdx < stepsData.length) {
+        const drawerStep = document.getElementById(`drawer-timeline-step-${drawerStepIdx}`);
+        if(drawerStep) drawerStep.className = 'drawer-step active';
+        const agentCard = document.getElementById(`drawer-agent-${drawerStepIdx}`);
+        if(agentCard) agentCard.className = 'agent-card-side active';
+        
+        drawerStepIdx++;
+        setTimeout(updateDrawerSteps, 2000);
+      }
+    }
+
+    function updateSteps() {
+      if (currentStep > 0) {
+        const prevIdx = currentStep - 1;
+        const prevEl = thinkingCard.querySelector(`[data-index="${prevIdx}"]`);
+        if(prevEl) {
+          prevEl.className = 'thinking-step completed';
+          prevEl.querySelector('.thinking-step-icon').innerHTML = checkIcon;
+        }
+      }
+
+      if (currentStep < stepsData.length) {
+        if(dynamicTitle) {
+          dynamicTitle.innerText = ongoingTexts[currentStep] || "Processing...";
+        }
+
+        const activeEl = thinkingCard.querySelector(`[data-index="${currentStep}"]`);
+        if(activeEl) {
+          activeEl.className = 'thinking-step active';
+          activeEl.querySelector('.thinking-step-icon').innerHTML = spinIcon;
+        }
+        
+        container.scrollTop = container.scrollHeight;
+
+        currentStep++;
+        setTimeout(updateSteps, 2000);
+      } else {
+        setTimeout(() => {
+          thinkingCard.className = '';
+          thinkingCard.innerHTML = `
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; border: 1px solid var(--color-border); border-radius: 16px; background: white; margin-bottom: 32px; box-shadow: var(--card-shadow);">
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <div style="width: 40px; height: 40px; background: #F8F9FA; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </div>
+                <div style="font-size: 16px; font-weight: 600; color: var(--color-text-primary);">Completed</div>
+              </div>
+              <button class="thinking-toggle" id="btn-hide-steps" style="color: var(--color-text-secondary);">Show Steps</button>
+            </div>
+          `;
+          document.getElementById('btn-hide-steps').addEventListener('click', () => {
+            agentDrawer.classList.toggle('open');
+            document.body.classList.toggle('drawer-open');
+            if(!drawerAnimationStarted) {
+               drawerAnimationStarted = true;
+               updateDrawerSteps();
+            }
+          });
+          onComplete(thinkingCard);
+        }, 500);
+      }
+    }
+
+    updateSteps();
+  }
+
+  function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text && selectedFiles.length === 0) return;
+
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'user-message';
+
+    let contentHTML = '';
+    if (text) {
+      contentHTML += `<div class="user-message-text">${text}</div>`;
+    }
+
+    if (selectedFiles.length > 0) {
+      contentHTML += `<div class="user-message-attachments">`;
+      Array.from(chatPreviews.children).forEach(preview => {
+        const img = preview.querySelector('img');
+        if (img) {
+          contentHTML += `<img src="${img.src}" class="attachment-thumbnail">`;
+        } else {
+          const textDiv = preview.querySelector('.preview-doc');
+          contentHTML += `<div class="attachment-thumbnail preview-doc">${textDiv.innerText}</div>`;
+        }
+      });
+      contentHTML += `</div>`;
+    }
+
+    msgDiv.innerHTML = contentHTML;
+    
+    scrollArea.appendChild(msgDiv);
+
+    chatInput.value = '';
+    selectedFiles = [];
+    chatPreviews.innerHTML = '';
+    chatPreviews.style.display = 'none';
+
+    setTimeout(() => {
+      scrollArea.scrollTop = scrollArea.scrollHeight;
+    }, 10);
+
+    // Check if prompt is specific
+    const lowerText = text.toLowerCase();
+    const isSpecific = lowerText.includes('ksa scenario') || lowerText.includes('qatar') || selectedFiles.length > 0;
+    
+    // Simulate thinking process
+    simulateThinking(scrollArea, (thinkingCard) => {
+      const templateId = isSpecific ? '#new-scenario-card' : '#original-scenario-card';
+      const templateCard = document.querySelector(templateId);
+      if (templateCard) {
+        const newCard = templateCard.cloneNode(true);
+        newCard.style.display = 'block';
+        newCard.id = ''; // Remove duplicate ID
+        scrollArea.appendChild(newCard);
+        scrollArea.scrollTop = scrollArea.scrollHeight;
+      }
+    });
+  }
+
+  btnSend.addEventListener('click', sendMessage);
+  chatInput.addEventListener('input', function() {
+    this.style.height = '40px';
+    if(this.scrollHeight > 40) {
+      this.style.height = this.scrollHeight + 'px';
+    }
+  });
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+  // Modal Logic
+  const modalBackdrop = document.getElementById('agent-modal-backdrop');
+  const modal = document.getElementById('agent-modal');
+  const modalClose = document.getElementById('modal-close');
+
+  document.querySelectorAll('.agent-card-side').forEach((card, index) => {
+    card.addEventListener('click', () => {
+      const modalBackdrop = document.getElementById('agent-modal-backdrop');
+      const modal = document.getElementById('agent-modal');
+      const modalTitle = document.querySelector('.agent-modal-title');
+      const modalContent = document.querySelector('.agent-modal-content');
+      
+      modalTitle.innerHTML = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> <span>Agent Reasoning Details</span>`;
+      
+      let html = `<div class="steps-accordion">`;
+      agentsData.forEach((data, i) => {
+         html += `
+          <div class="step-accordion-item ${i === index ? 'expanded' : ''}">
+            <div class="step-accordion-line"></div>
+            <div class="step-accordion-icon completed">
+              ${data.icon.replace('width="24" height="24"', 'width="14" height="14"')}
+            </div>
+            <div class="step-accordion-content">
+              <div class="step-accordion-header" onclick="this.parentElement.parentElement.classList.toggle('expanded')">
+                <div>
+                  <div class="step-accordion-title" style="font-size:16px; font-weight:700; color:var(--color-text-primary);">${data.title}</div>
+                  <div class="step-accordion-subtitle" style="font-size:13px; color:var(--color-text-secondary); margin-top:4px;">${data.subtitle}</div>
+                </div>
+                <svg class="step-accordion-toggle" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div class="step-accordion-body">
+                <p style="color:var(--color-text-secondary); line-height:1.5; margin-bottom:16px;">${data.desc}</p>
+                ${data.sections.map(sec => `
+                  <div class="agent-modal-section" style="margin-bottom: 24px;">
+                    <div class="agent-modal-subtitle" style="font-size:14px; font-weight:600; color:var(--color-text-primary); margin-bottom:8px;">${sec.heading}</div>
+                    ${sec.content}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+         `;
+      });
+      html += `</div>`;
+      
+      modalContent.innerHTML = html;
+      
+      modalBackdrop.style.display = 'block';
+      modal.style.display = 'flex';
+    });
+    card.style.cursor = 'pointer';
+  });
+
+  if(modalClose) {
+    modalClose.addEventListener('click', () => {
+      modalBackdrop.style.display = 'none';
+      modal.style.display = 'none';
+    });
+  }
+  if(modalBackdrop) {
+    modalBackdrop.addEventListener('click', () => {
+      modalBackdrop.style.display = 'none';
+      modal.style.display = 'none';
+    });
+  }
+</script>
+</body>
+</html>

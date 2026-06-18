@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Innovation Hub — Competitor Disruption Detected</title>
+  <meta name="description" content="Innovation Hub detailed summary page">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <!-- Purple cube-like icon -->
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="8" width="18" height="18" rx="4" fill="#7C5CFC" opacity="0.8"/>
+            <rect x="8" y="3" width="18" height="18" rx="4" fill="#A78BFA"/>
+            <rect x="10" y="5" width="14" height="14" rx="3" fill="#C4B5FD"/>
+          </svg>
+        </div>
+        <span class="sidebar-logo-text">Innovation Hub</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-item active" style="text-decoration: none;">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </span>
+        <span>Dashboard</span>
+      </a>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="10" r="3"/>
+            <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/>
+          </svg>
+        </span>
+        <span>Agent Repository</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" y1="3" x2="6" y2="15"/>
+            <circle cx="18" cy="6" r="3"/>
+            <circle cx="6" cy="18" r="3"/>
+            <path d="M18 9a9 9 0 0 1-9 9"/>
+          </svg>
+        </span>
+        <span>Workflows</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 11 18-5v12L3 13v-2z"/>
+            <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+          </svg>
+        </span>
+        <span>Campaigns</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+            <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+          </svg>
+        </span>
+        <span>Insights</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </span>
+        <span>Documents</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </span>
+        <span>Settings</span>
+      </div>
+    </nav>
+
+    <!-- Profile -->
+    <div class="sidebar-profile">
+      <div class="profile-avatar">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="avatarGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#8B5CF6"/>
+              <stop offset="100%" style="stop-color:#C084FC"/>
+            </linearGradient>
+          </defs>
+          <rect width="40" height="40" rx="20" fill="url(#avatarGrad2)"/>
+          <text x="20" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="white" text-anchor="middle">SA</text>
+        </svg>
+      </div>
+      <div class="profile-info">
+        <div class="profile-name">Sara Al Mansoori</div>
+        <div class="profile-role">Commercial Manager</div>
+      </div>
+      <span class="profile-chevron">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </span>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="main-content summary-page-content">
+
+    <!-- Header area -->
+    <div class="summary-header-wrap">
+      <div class="summary-header-top">
+        <a href="index.html" class="back-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Dashboard
+        </a>
+      </div>
+      <div class="summary-header-main">
+        <div class="summary-title-col">
+          <h1 class="summary-title">Competitor Disruption Detected</h1>
+          <p class="summary-subtitle">Hero SKUs impacted across UAE · KSA · Qatar</p>
+        </div>
+        <div class="summary-actions">
+          <button class="btn-primary export-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Export Report
+          </button>
+          <button class="btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <circle cx="12" cy="12" r="1"></circle>
+              <circle cx="12" cy="5" r="1"></circle>
+              <circle cx="12" cy="19" r="1"></circle>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="summary-layout">
+      <!-- Left Column -->
+      <div class="summary-left">
+        <!-- Tabs -->
+        <div class="summary-tabs">
+          <div class="tab-item active">Summary</div>
+          <a href="analysis.html" class="tab-item" style="text-decoration: none;">Analysis & Chat</a>
+          <div class="tab-item">Agents Involved</div>
+          <div class="tab-item">Agent Triggered</div>
+          <div class="tab-item">Data & Sources</div>
+        </div>
+
+        <div class="summary-content-inner">
+          <!-- Executive Summary -->
+          <div class="summary-section">
+            <div class="section-header">
+              <h2 class="section-heading">Executive Summary</h2>
+              <a href="#" class="view-detailed-link">View Detailed Analysis</a>
+            </div>
+            <p class="section-text">
+              Overnight AI workflows detected a significant competitor pricing disruption impacting key markets across the GCC region. The platform analyzed the potential business impact, generated response recommendations, and prepared updated campaign assets.
+            </p>
+          </div>
+
+          <!-- Agents Involved -->
+          <div class="summary-section">
+            <h2 class="section-heading">Agents Involved</h2>
+            <div class="agent-pills">
+              <span class="agent-pill">Super Agent</span>
+              <span class="agent-pill">Market Intelligence Analyst</span>
+              <span class="agent-pill">Demand & Pricing Strategist</span>
+              <span class="agent-pill">Campaign Orchestrator</span>
+            </div>
+          </div>
+
+          <!-- Triggering Events -->
+          <div class="summary-section">
+            <h2 class="section-heading">Triggering Events</h2>
+            <ul class="triggering-list">
+              <li>Competitor pricing disruption detected in GCC markets</li>
+              <li>Margin impact threshold exceeded</li>
+              <li>High-value SKUs identified at risk</li>
+            </ul>
+          </div>
+
+          <!-- Agent Contributions -->
+          <div class="summary-section">
+            <h2 class="section-heading">Agent Contributions</h2>
+            <div class="contributions-grid">
+              <div class="contribution-card">
+                <div class="contrib-title">Super Agent</div>
+                <p class="contrib-text">Coordinated analysis and generated the final response strategy</p>
+                <div class="contrib-link">Response Strategy Created</div>
+              </div>
+              <div class="contribution-card">
+                <div class="contrib-title">Market Intelligence Analyst</div>
+                <p class="contrib-text">Detected competitor price disruption across GCC markets</p>
+                <div class="contrib-link">Competitor Activity Identified</div>
+              </div>
+              <div class="contribution-card">
+                <div class="contrib-title">Demand & Pricing Strategist</div>
+                <p class="contrib-text">Evaluated margin impact and recommended pricing actions</p>
+                <div class="contrib-link">Pricing Scenarios Generated</div>
+              </div>
+              <div class="contribution-card">
+                <div class="contrib-title">Campaign Orchestrator</div>
+                <p class="contrib-text">Prepared campaign updates and communication assets</p>
+                <div class="contrib-link">Campaign Assets Prepared</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Risks -->
+          <div class="summary-section">
+            <h2 class="section-heading">Risks</h2>
+            <div class="risks-grid">
+              <div class="risk-card">
+                <div class="risk-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                </div>
+                <div class="risk-title">Price Disruption</div>
+                <div class="risk-desc">Competitor discount detected</div>
+              </div>
+              <div class="risk-card">
+                <div class="risk-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 2 11 14 2 14"></polygon><polygon points="22 10 13 10 13 22"></polygon></svg>
+                </div>
+                <div class="risk-title">Upcoming Campaigns</div>
+                <div class="risk-desc">Campaign performance at risk</div>
+              </div>
+              <div class="risk-card">
+                <div class="risk-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                </div>
+                <div class="risk-title">Margin Erosion</div>
+                <div class="risk-desc">Profitability exposure identified</div>
+              </div>
+              <div class="risk-card">
+                <div class="risk-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+                <div class="risk-title">Market Share Risk</div>
+                <div class="risk-desc">Competitive pressure increasing</div>
+              </div>
+              <div class="risk-card">
+                <div class="risk-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <div class="risk-title">High-Risk SKUs</div>
+                <div class="risk-desc">Key products affected</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data & Sources Used -->
+          <div class="summary-section">
+            <h2 class="section-heading">Data & Sources Used</h2>
+            <div class="data-sources-row">
+              <div class="data-source-item">
+                <div class="ds-val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> 152</div>
+                <div class="ds-label">Web Sources</div>
+              </div>
+              <div class="data-source-item">
+                <div class="ds-val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> 24</div>
+                <div class="ds-label">Internal Reports</div>
+              </div>
+              <div class="data-source-item">
+                <div class="ds-val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg> 8</div>
+                <div class="ds-label">Databases</div>
+              </div>
+              <div class="data-source-item">
+                <div class="ds-val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg> 5</div>
+                <div class="ds-label">APIs</div>
+              </div>
+              <div class="data-source-item">
+                <div class="ds-val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg> 11</div>
+                <div class="ds-label">Files</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Decision Chain -->
+      <div class="summary-right">
+        <h2 class="section-heading decision-heading">Decision Chain</h2>
+        <div class="decision-timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-step">01</div>
+            <div class="timeline-node">
+              <div class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-4"/></svg></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Market Intelligence Agent</div>
+              <div class="timeline-action">Disruption Detected</div>
+              <div class="timeline-desc">Competitor price drop identified</div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-step">02</div>
+            <div class="timeline-node">
+              <div class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Super Agent</div>
+              <div class="timeline-action">Tasks Assigned</div>
+              <div class="timeline-desc">Specialist agents activated</div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-step">03</div>
+            <div class="timeline-node">
+              <div class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Market Intelligence Analyst</div>
+              <div class="timeline-action">Exposure Assessed</div>
+              <div class="timeline-desc">SKU impact and switching intent mapped</div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-step">04</div>
+            <div class="timeline-node">
+              <div class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Demand & Pricing Strategist</div>
+              <div class="timeline-action">Scenario Modeled</div>
+              <div class="timeline-desc">Pricing and margin response evaluated</div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="timeline-item">
+            <div class="timeline-step">05</div>
+            <div class="timeline-node">
+              <div class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Campaign Orchestrator</div>
+              <div class="timeline-action">Campaigns Reviewed</div>
+              <div class="timeline-desc">Launch risks and updates identified</div>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="timeline-item">
+            <div class="timeline-step">06</div>
+            <div class="timeline-node">
+              <div class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Super Agent</div>
+              <div class="timeline-action">Findings Consolidated</div>
+              <div class="timeline-desc">Agent insights combined</div>
+            </div>
+          </div>
+          <!-- Item 7 -->
+          <div class="timeline-item">
+            <div class="timeline-step">07</div>
+            <div class="timeline-node">
+              <div class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Super Agent</div>
+              <div class="timeline-action">Recommendations Generated</div>
+              <div class="timeline-desc">Actions and drafts prepared</div>
+            </div>
+          </div>
+          <!-- Item 8 -->
+          <div class="timeline-item">
+            <div class="timeline-step">08</div>
+            <div class="timeline-node">
+              <div class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Super Agent</div>
+              <div class="timeline-action">Executive Summary Delivered</div>
+              <div class="timeline-desc">Sara notified with next steps</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
