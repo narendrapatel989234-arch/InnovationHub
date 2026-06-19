@@ -12,7 +12,7 @@
   --border-color: #1A2235; /* Subtle borders */
   
   /* Primary Accents */
-  --color-primary: #155EEF; /* Vibrant Blue from the image */
+  --color-primary: #3B82F6; /* Vibrant Blue from the image */
   --color-primary-glow: rgba(21, 94, 239, 0.3);
   --color-primary-dark: #0D4AC0;
   
@@ -1734,4 +1734,291 @@ body {
 }
 .action-icon-btn:hover {
   background: rgba(0,0,0,0.05);
+}
+
+/* Dark Theme Drawer & Modal Overrides */
+.dark-drawer {
+    background: #2F2F2F;
+    border-left: 1px solid rgba(255,255,255,0.08);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    color: #FFFFFF;
+}
+.dark-drawer .drawer-header {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.dark-drawer .drawer-title {
+    color: #FFFFFF;
+}
+.dark-drawer .drawer-close {
+    color: #8F95B2;
+}
+.dark-drawer .drawer-close:hover {
+    background: rgba(255,255,255,0.05);
+}
+.dark-drawer .drawer-section-header span {
+    color: #3B82F6 !important;
+}
+.dark-drawer .drawer-section-header svg {
+    stroke: #3B82F6 !important;
+}
+.dark-drawer .agent-card-side {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.2s ease;
+}
+.dark-drawer .agent-card-side:hover {
+    background: rgba(21, 94, 239, 0.1);
+    border-color: rgba(21, 94, 239, 0.3);
+    transform: translateY(-2px);
+}
+.dark-drawer .agent-name {
+    color: #FFFFFF;
+}
+.dark-drawer .agent-desc {
+    color: #8F95B2;
+}
+
+.dark-modal {
+    background: #181B24;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    color: #FFFFFF;
+}
+.dark-modal .agent-modal-header {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.dark-modal .agent-modal-title {
+    color: #FFFFFF;
+}
+.dark-modal .agent-modal-close {
+    color: #8F95B2;
+}
+.dark-modal .agent-modal-close:hover {
+    background: rgba(255,255,255,0.05);
+}
+.dark-modal .agent-modal-subtitle {
+    color: #FFFFFF;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.dark-modal p, .dark-modal .agent-actions-list {
+    color: #8F95B2;
+}
+.dark-modal .agent-table th {
+    background: rgba(255,255,255,0.03);
+    color: #8F95B2;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.dark-modal .agent-table td {
+    color: #FFFFFF;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Dark Thinking Steps Overlay */
+.thinking-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 16px;
+    max-width: 80%;
+    margin-bottom: 24px;
+}
+.thinking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.thinking-title {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+}
+.thinking-toggle {
+    background: transparent;
+    border: 1px solid #3B82F6;
+    color: #3B82F6;
+    border-radius: 8px;
+    padding: 6px 16px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.thinking-toggle:hover {
+    background: rgba(21, 94, 239, 0.1);
+}
+.thinking-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 16px;
+}
+.thinking-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+}
+.thinking-step-content {
+    display: flex;
+    flex-direction: column;
+}
+.thinking-step-title {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+}
+.thinking-step-desc {
+    color: #8F95B2;
+    font-size: 12px;
+}
+.thinking-step.pending .thinking-step-title,
+.thinking-step.pending .thinking-step-desc {
+    color: #4B5563;
+}
+.thinking-step.active .thinking-step-title {
+    color: #3B82F6;
+}
+
+.drawer-timeline-item {
+    padding-bottom: 24px;
+    border-left: 2px solid rgba(255,255,255,0.08);
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.drawer-timeline-item:hover {
+    background: rgba(255,255,255,0.02);
+}
+.drawer-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3B82F6;
+}
+.drawer-timeline-title {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.drawer-timeline-subtitle {
+    color: #8F95B2;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+.drawer-timeline-desc {
+    color: #FFFFFF;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Drawer Timeline Stepper Customization */
+.drawer-timeline {
+    position: relative;
+    padding-left: 12px;
+}
+.drawer-timeline::before {
+    content: '';
+    position: absolute;
+    left: 16.5px;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background: rgba(255,255,255,0.1);
+}
+.drawer-timeline-item {
+    position: relative;
+    padding-left: 28px;
+    padding-bottom: 32px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.drawer-timeline-item.active, .drawer-timeline-item.completed {
+    opacity: 1;
+}
+.drawer-timeline-item:last-child {
+    padding-bottom: 0;
+}
+.drawer-timeline-item::before {
+    display: none; /* override previous dot */
+}
+.drawer-step-dot {
+    position: absolute;
+    left: -2px;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #3B82F6;
+    border: 2px solid #2F2F2F;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.drawer-timeline-item.active .drawer-step-dot {
+    box-shadow: 0 0 0 3px rgba(21, 94, 239, 0.3);
+    background: #3B82F6;
+}
+.drawer-timeline-item.completed .drawer-step-dot {
+    background: #10B981;
+    box-shadow: 0 0 0 2px rgba(0, 196, 140, 0.2);
+}
+
+/* Agent Card Customization for Design Match */
+.dark-drawer .agent-card-side {
+    background: #2F2F2F;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.dark-drawer .agent-card-side.active, .dark-drawer .agent-card-side.completed {
+    opacity: 1;
+    border-color: #10B981;
+    background: rgba(0, 196, 140, 0.02);
+    box-shadow: 0 4px 12px rgba(0, 196, 140, 0.05);
+}
+.dark-drawer .agent-card-side .agent-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    flex-shrink: 0;
+}
+.dark-drawer .agent-card-side.active .agent-icon, .dark-drawer .agent-card-side.completed .agent-icon {
+    background: rgba(0, 196, 140, 0.1);
+    color: #10B981;
+}
+
+/* Fix White Hover in Dark Mode */
+.dark-modal .step-accordion-header:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+.dark-drawer .drawer-timeline-item:hover {
+    background: transparent !important;
+    opacity: 0.8;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spin-animation {
+  animation: spin 1s linear infinite;
+  transform-origin: center;
 }
