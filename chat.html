@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian - Dark AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" style="background: #000000; padding: 24px 16px; border-right: 1px solid rgba(255,255,255,0.12);">
+    <div class="logo-area" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; padding: 0 8px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div class="logo-icon" style="width: 28px; height: 28px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000000;">
+          <img src="logo.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="logo-text" style="font-size: 15px; font-weight: 500; color: #fff;">Meridian</div>
+      </div>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#8F95B2" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </div>
+
+    <nav class="nav-menu" style="display: flex; flex-direction: column; gap: 4px;">
+      <a href="#" class="nav-item active" style="background: #155EEF; color: #fff; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none; border-left: none;">
+        <img src="dashboard-icon.png" style="width: 18px; height: 18px; object-fit: contain; mix-blend-mode: screen;">
+        Dashboard
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8F95B2" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Agents
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8F95B2" stroke-width="2"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+        Workflows
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8F95B2" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        Campaigns
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8F95B2" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+        Insights
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8F95B2" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        Documents
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8F95B2" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        Settings
+      </a>
+    </nav>
+
+    <div class="sidebar-profile" style="position: absolute; bottom: 24px; left: 16px; right: 16px; display: flex; align-items: center; justify-content: space-between; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; cursor: pointer;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden;">
+          <img src="profile.jpg" alt="Profile" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transform: scale(1.3);">
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 13px; font-weight: 500; color: #fff;">Reem</span>
+          <span style="font-size: 11px; color: #8F95B2;">Commercial Manager</span>
+        </div>
+      </div>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#8F95B2" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-scroll" style="padding: 32px 40px; height: 100vh; overflow: hidden; display: flex; flex-direction: column; background: #0A0A0C;">
+<!-- Welcome Header -->
+      <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; flex-shrink: 0;">
+        <div>
+          <h1 style="font-size: 26px; font-weight: 500; color: #FFFFFF; margin-bottom: 8px; letter-spacing: -0.3px;">Good Morning Reem ✨</h1>
+          <p style="font-size: 13px; color: #8F95B2;">Here's what I took care for you in last 12 hours. within your rules - ready for you review.</p>
+        </div>
+        <button class="notification-btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+        </button>
+      </div>
+
+      
+      
+      
+<!-- Navigation Tabs -->
+      <div style="display: flex; gap: 32px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px; padding-bottom: 0;">
+        <a href="index.html" style="padding-bottom: 12px; color: #8F95B2; font-size: 14px; font-weight: 400; cursor: pointer; text-decoration: none;">Overview</a>
+        <div style="padding-bottom: 12px; border-bottom: 2px solid #155EEF; color: #FFFFFF; font-size: 14px; font-weight: 500; cursor: pointer;">Chat</div>
+        <div style="padding-bottom: 12px; color: #8F95B2; font-size: 14px; font-weight: 400; cursor: pointer;">ROI</div>
+        <div style="padding-bottom: 12px; color: #8F95B2; font-size: 14px; font-weight: 400; cursor: pointer;">Activity</div>
+      </div>
+      
+      <!-- Chat Container -->
+      <div id="analysis-scroll-area" style="flex: 1; max-width: 850px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; position: relative; padding-bottom: 120px; overflow-y: auto;">
+        
+        <!-- Chat Header -->
+        
+
+        <!-- User Message -->
+        <div style="display: flex; justify-content: flex-end; margin-bottom: 32px;">
+          <div style="background: #155EEF; color: #FFFFFF; padding: 16px 20px; border-radius: 20px 20px 4px 20px; max-width: 80%; font-size: 15px; line-height: 1.5; box-shadow: 0 4px 12px rgba(21, 94, 239, 0.2);">
+            Why did we match the competitor on milk — but not on yogurt? Let me know the reasons.
+          </div>
+        </div>
+
+        <!-- AI Thinking Steps -->
+        <div style="display: flex; justify-content: flex-start; margin-bottom: 24px;">
+          <div style="display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 100%;">
+            <!-- Thinking Header with CTA -->
+            <div style="display: flex; align-items: center; gap: 12px; justify-content: space-between; color: #8F95B2; font-size: 14px; font-weight: 500; padding: 12px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 100%; box-sizing: border-box;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Completed</span>
+              </div>
+              <button onclick="document.getElementById('agent-drawer').classList.toggle('open')" style="background: transparent; border: 1px solid #155EEF; border-radius: 6px; color: #155EEF; font-size: 12px; font-weight: 500; padding: 6px 12px; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(21, 94, 239, 0.1)'" onmouseout="this.style.background='transparent'">Show Steps</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bot Response -->
+        <div id="bot-response" style="display: flex; justify-content: flex-start; margin-bottom: 24px;">
+          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; max-width: 85%;">
+            <!-- Response Bubble -->
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); border-radius: 20px 20px 20px 4px; padding: 20px 24px; color: #FFFFFF; font-size: 15px; line-height: 1.6; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+              <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
+                <li style="color: #FFFFFF;"><span style="color: #8F95B2;">Milk is a price-sensitive staple</span> — matching the competitor protects basket traffic.</li>
+                <li style="color: #FFFFFF;"><span style="color: #8F95B2;">Yogurt carries a healthier margin and lower price-elasticity</span> — a match would erode margin for little footfall gain.</li>
+                <li style="color: #FFFFFF;"><span style="color: #8F95B2;">Net effect:</span> hold yogurt, match milk — protects both volume and margin.</li>
+              </ul>
+            </div>
+            
+            <!-- Metadata & Avatar Below -->
+            <div style="display: flex; align-items: center; gap: 12px; margin-left: 8px;">
+              <div style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <img src="logo.jpg" alt="Meridian" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.5);">
+              </div>
+              <span style="color: #FFFFFF; font-weight: 600; font-size: 14px;">Meridian</span>
+              <span style="color: #8F95B2; font-size: 12px;">09:15 AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Prompt Box -->
+      <div style="position: fixed; bottom: 32px; left: calc(280px + (100vw - 280px) / 2); transform: translateX(-50%); width: 100%; max-width: 850px; background: #2F2F2F; border: 1px solid rgba(255,255,255,0.08); border-radius: 100px; padding: 12px 12px 12px 24px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 12px 40px rgba(0,0,0,0.5); z-index: 1000;">
+        <div id="chat-previews" style="position: absolute; bottom: calc(100% + 12px); left: 24px; display: flex; gap: 8px; flex-wrap: wrap;"></div>
+        <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+          <div id="btn-attach" style="cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#8F95B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+          </div>
+          <input type="text" id="chat-input" placeholder="Type your message..." style="background: transparent; border: none; color: #FFFFFF; font-size: 15px; outline: none; width: 100%;">
+        </div>
+        <button id="btn-send" style="background: #155EEF; border: none; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-left: 12px; transition: transform 0.2s; box-shadow: 0 4px 12px rgba(21, 94, 239, 0.3);">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: -2px; margin-top: 2px;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </div>
+      
+      <input type="file" id="file-input" style="display: none;" multiple>
+  </main>
+
+
+<!-- Modal -->
+<div class="modal-backdrop" id="agent-modal-backdrop" style="display: none;"></div>
+<div class="agent-modal dark-modal" id="agent-modal" style="display: none;">
+  <div class="agent-modal-header">
+    <div class="agent-modal-title">Demand & Sales Projection Update</div>
+    <button class="agent-modal-close" id="modal-close">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
+  <div class="agent-modal-content">
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Summary</div>
+      <p>Updated revenue and demand forecasts using competitor pricing, conversion trends, inventory availability, and loyalty segment data.</p>
+    </div>
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Key Inputs</div>
+      <table class="agent-table">
+        <thead><tr><th>Source</th><th>Insight</th></tr></thead>
+        <tbody>
+          <tr><td>Competitor Pricing</td><td>14% price gap</td></tr>
+          <tr><td>UAE E-commerce</td><td>Conversion ↓ 11%</td></tr>
+          <tr><td>Saudi Inventory</td><td>Stock ↑ 18%</td></tr>
+          <tr><td>CRM</td><td>Loyalty offer eligible</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Impact</div>
+      <table class="agent-table">
+        <thead><tr><th>Metric</th><th>Updated</th></tr></thead>
+        <tbody>
+          <tr><td>Revenue at Risk</td><td>AED 1.2M</td></tr>
+          <tr><td>Margin Exposure</td><td>-4.8%</td></tr>
+          <tr><td>Recovery Potential</td><td>AED 860K</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Agent Actions</div>
+      <div class="agent-actions-list">
+        <div>Pricing & Demand Agent → Updated demand forecasts</div>
+        <div>Inventory Agent → Validated stock availability</div>
+        <div>Super Agent → Generated revised projections</div>
+      </div>
+    </div>
+    <div class="agent-modal-section">
+      <div class="agent-modal-subtitle">Outcome</div>
+      <div class="agent-outcome">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span style="color: #22C55E; font-weight: 500;">Updated business impact model generated</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Side Drawer -->
+<div class="side-drawer dark-drawer" id="agent-drawer">
+  <div class="drawer-header">
+    <div class="drawer-title">Agent Reasoning Flow</div>
+    <button class="drawer-close" id="drawer-close">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
+  
+  <div class="drawer-section">
+    <div class="drawer-section-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <span style="color: var(--color-primary); font-weight: 600;">Agents in Action</span>
+      </div>
+      
+    </div>
+    
+    <div class="drawer-agents">
+      <div class="agent-card-side" id="drawer-agent-0">
+        <div class="agent-icon" style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="18" y="3" width="4" height="18"></rect><rect x="10" y="8" width="4" height="13"></rect><rect x="2" y="13" width="4" height="8"></rect></svg></div>
+        <div class="agent-info">
+          <div class="agent-name">Pricing & Demand Agent</div>
+          <div class="agent-desc">Competitor reduced price by 14% on a top-selling campaign SKU.</div>
+        </div>
+      </div>
+      <div class="agent-card-side" id="drawer-agent-1">
+        <div class="agent-icon" style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div>
+        <div class="agent-info">
+          <div class="agent-name">Inventory Agent</div>
+          <div class="agent-desc">Saudi has excess stock that can support a regional bundle.</div>
+        </div>
+      </div>
+      <div class="agent-card-side" id="drawer-agent-2">
+        <div class="agent-icon" style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-5v12L3 13v-2z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg></div>
+        <div class="agent-info">
+          <div class="agent-name">Campaign Agent</div>
+          <div class="agent-desc">Weekend campaign needs to be adjusted before launch.</div>
+        </div>
+      </div>
+      <div class="agent-card-side" id="drawer-agent-3">
+        <div class="agent-icon" style="color: var(--color-primary);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.5 2H2v11.5c0 6.35 5.15 11.5 11.5 11.5S25 19.85 25 13.5 19.85 2 13.5 2z"></path><polygon points="9.5 9 14.5 14 20.5 8 16 3"></polygon></svg></div>
+        <div class="agent-info">
+          <div class="agent-name">Super Agent</div>
+          <div class="agent-desc">Full price match is not recommended. Selective regional response is recommended.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawer-section" style="margin-top: 24px;">
+    <div class="drawer-section-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--color-primary)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        <span style="color: var(--color-primary); font-weight: 600;">Thinking Steps</span>
+      </div>
+    </div>
+    <div class="drawer-timeline" id="drawer-timeline"></div>
+  </div>
+</div>
+
+<script>
+// --- Data ---
+const stepsData = [
+    {
+      title: "Understanding simulation objective",
+      subtitle: "Understanding the request and validating inputs",
+      desc: "Reviewing the scenario assumptions, attached competitor advertisement, campaign context, and regional inventory signals.",
+      sections: [
+        {
+          heading: "Request Validation",
+          content: `<ul class="bot-list">
+            <li>Weekend promotion extension identified as primary scenario change</li>
+            <li>Qatar inventory restock included in analysis scope</li>
+            <li>Commercial Director one-pager requested as final deliverable</li>
+          </ul>`
+        }
+      ]
+    },
+    {
+      title: "Evaluating competitor discount duration & regional sensitivity",
+      subtitle: "Analyzing market, pricing, and inventory signals",
+      desc: "Collecting competitive, commercial, and operational insights across UAE, Saudi Arabia, and Qatar.",
+      sections: [
+        {
+          heading: "Competitor Signals",
+          content: `<ul class="bot-list">
+            <li>Competitor price gap detected at 14%</li>
+            <li>Weekend promotion remains active</li>
+            <li>Promotional pressure concentrated on hero campaign SKU</li>
+          </ul>`
+        }
+      ]
+    },
+    {
+      title: "Modeling demand elasticity over 14 & 30 days",
+      subtitle: "Evaluating projected business impact",
+      desc: "Simulating pricing, demand, and inventory outcomes under multiple response strategies.",
+      sections: [
+        {
+          heading: "Scenarios Evaluated",
+          content: `<ul class="bot-list check-list">
+            <li>No Action</li>
+            <li>Full Price Match</li>
+            <li>Regional Response Strategy</li>
+          </ul>`
+        }
+      ]
+    },
+    {
+      title: "Simulating margin impact under discount scenarios",
+      subtitle: "Margin projections",
+      desc: "Simulating the margin erosion under the required discount matching.",
+      sections: [
+        {
+          heading: "Margin Impact",
+          content: `<table class="agent-table">
+            <thead><tr><th>Scenario</th><th>Margin Impact</th></tr></thead>
+            <tbody>
+              <tr><td>Full Match</td><td><span class="badge badge-red">Erosion</span></td></tr>
+              <tr><td>Regional Response</td><td><span class="badge badge-green">Within Target</span></td></tr>
+            </tbody>
+          </table>`
+        }
+      ]
+    },
+    {
+      title: "Assessing inventory coverage & stock-out probability",
+      subtitle: "Preparing updated response strategy",
+      desc: "Combining agent findings into a unified commercial response plan.",
+      sections: [
+        {
+          heading: "Recommended Market Actions",
+          content: `<div style="margin-bottom: 12px;"><strong>🇦🇪 UAE</strong><br><span style="color:var(--color-text-secondary);">Targeted price defense on selected SKU</span></div>
+                    <div style="margin-bottom: 12px;"><strong>🇸🇦 Saudi Arabia</strong><br><span style="color:var(--color-text-secondary);">Bundle excess inventory with loyalty offer</span></div>
+                    <div><strong>🇶🇦 Qatar</strong><br><span style="color:var(--color-text-secondary);">Maintain current campaign strategy</span></div>`
+        }
+      ]
+    }
+];
+
+const agentsData = [
+  {
+    title: "Market Intelligence Agent",
+    icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>`,
+    subtitle: "Interpreting market shifts and competitive landscape.",
+    desc: "Analyzing competitor pricing activity, customer conversion behavior, and demand elasticity across GCC markets.",
+    sections: [
+      {
+        heading: "Pricing Signals",
+        content: `<ul class="bot-list">
+          <li>Competitor promotion detected with a 14% price gap</li>
+          <li>Promotional activity concentrated on hero campaign SKU</li>
+          <li>Weekend offer expected to increase competitive pressure</li>
+        </ul>`
+      }
+    ]
+  },
+  {
+    title: "Demand & Pricing Agent",
+    icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 12A4 4 0 0 0 8 12"></path></svg>`,
+    subtitle: "Assessing demand and stock impact across markets.",
+    desc: "Reviewing stock availability, regional inventory distribution, and replenishment status.",
+    sections: [
+      {
+        heading: "Inventory Signals",
+        content: `<ul class="bot-list">
+          <li>Saudi inventory currently 18% above plan</li>
+          <li>Qatar restock completed successfully last week</li>
+          <li>No supply constraints identified</li>
+        </ul>`
+      }
+    ]
+  },
+  {
+    title: "Campaign Agent",
+    icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>`,
+    subtitle: "Translating demand and inventory signals into regional campaigns.",
+    desc: "Analyzing campaign timing, messaging strategy, and market alignment.",
+    sections: [
+      {
+        heading: "Campaign Signals",
+        content: `<ul class="bot-list">
+          <li>Weekend campaign launch overlaps with competitor promotion</li>
+          <li>Existing campaign messaging lacks value differentiation</li>
+          <li>Campaign schedule remains adjustable</li>
+        </ul>`
+      }
+    ]
+  },
+  {
+    title: "Super Agent",
+    icon: `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>`,
+    subtitle: "Consolidating cross-agent insights into a unified plan.",
+    desc: "Consolidating findings from pricing, inventory, and campaign agents to determine the optimal commercial response.",
+    sections: [
+      {
+        heading: "Strategies Evaluated",
+        content: `<ul class="bot-list check-list">
+          <li>No Action</li>
+          <li>Full Price Match</li>
+          <li>Selective Regional Response</li>
+        </ul>`
+      }
+    ]
+  }
+];
+
+// --- Input Logic ---
+const chatInput = document.getElementById('chat-input');
+const btnSend = document.getElementById('btn-send');
+const btnAttach = document.getElementById('btn-attach');
+const fileInput = document.getElementById('file-input');
+const chatPreviews = document.getElementById('chat-previews');
+const scrollArea = document.getElementById('analysis-scroll-area');
+
+let selectedFiles = [];
+
+if (btnAttach && fileInput) {
+    btnAttach.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', (e) => {
+        const files = Array.from(e.target.files);
+        files.forEach(file => {
+            selectedFiles.push(file);
+            const pill = document.createElement('div');
+            pill.style.cssText = "display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 20px; color: #FFFFFF; font-size: 13px;";
+            pill.innerHTML = `
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+              ${file.name}
+            `;
+            chatPreviews.appendChild(pill);
+        });
+    });
+}
+
+if (btnSend && chatInput) {
+    
+const ongoingTexts = ["Initializing Analysis...", "Gathering insights...", "Modeling scenarios...", "Simulating impact...", "Generating recommendations..."];
+const spinIcon = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="spin-animation" style="color: #155EEF;"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg>`;
+const checkIcon = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+
+function simulateThinking(container, onComplete) {
+    const thinkingCard = document.createElement('div');
+    thinkingCard.style.cssText = "display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 100%; margin-bottom: 24px;";
+    
+    // Header
+    const header = document.createElement('div');
+    header.style.cssText = "display: flex; align-items: center; gap: 12px; justify-content: space-between; color: #8F95B2; font-size: 14px; font-weight: 500; padding: 12px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 100%; box-sizing: border-box;";
+    
+    header.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span id="dynamic-spin-icon">${spinIcon}</span>
+        <span id="dynamic-thinking-title" style="color: #FFFFFF;">Generating Output</span>
+      </div>
+      <button id="dynamic-btn-show-steps" style="display: none; background: transparent; border: 1px solid #155EEF; border-radius: 6px; color: #155EEF; font-size: 12px; font-weight: 500; padding: 6px 12px; cursor: pointer; transition: all 0.2s ease;">Show Steps</button>
+    `;
+    thinkingCard.appendChild(header);
+
+    // Steps container
+    const stepsContainer = document.createElement('div');
+    stepsContainer.style.cssText = "display: flex; flex-direction: column; gap: 16px; margin-top: 8px; margin-left: 8px; padding-left: 16px; border-left: 1px solid rgba(255,255,255,0.1);";
+    thinkingCard.appendChild(stepsContainer);
+    
+    container.appendChild(thinkingCard);
+
+    let currentStep = 0;
+    const dynamicTitle = document.getElementById('dynamic-thinking-title');
+    const dynamicSpinIcon = document.getElementById('dynamic-spin-icon');
+    const dynamicBtnShowSteps = document.getElementById('dynamic-btn-show-steps');
+
+    stepsData.forEach((step, index) => {
+      const stepEl = document.createElement('div');
+      stepEl.className = 'thinking-step pending';
+      stepEl.dataset.index = index;
+      stepEl.style.cssText = "display: flex; align-items: flex-start; gap: 12px; opacity: 0.5; transition: opacity 0.3s ease;";
+      stepEl.innerHTML = `
+        <div class="thinking-step-icon" style="margin-top: 2px;"></div>
+        <div class="thinking-step-content" style="display: flex; flex-direction: column;">
+          <div class="thinking-step-title" style="color: #FFFFFF; font-size: 14px; font-weight: 500;">${step.title}</div>
+          <div class="thinking-step-desc" style="color: #8F95B2; font-size: 12px; margin-top: 4px;">${step.desc}</div>
+        </div>
+      `;
+      stepsContainer.appendChild(stepEl);
+    });
+
+    function updateSteps() {
+      if (currentStep > 0) {
+        const prevIdx = currentStep - 1;
+        const prevEl = thinkingCard.querySelector(`[data-index="${prevIdx}"]`);
+        if(prevEl) {
+          prevEl.style.opacity = '1';
+          prevEl.querySelector('.thinking-step-icon').innerHTML = checkIcon;
+        }
+      }
+
+      if (currentStep < stepsData.length) {
+        if(dynamicTitle) {
+          dynamicTitle.innerText = ongoingTexts[currentStep] || "Processing...";
+        }
+
+        const activeEl = thinkingCard.querySelector(`[data-index="${currentStep}"]`);
+        if(activeEl) {
+          activeEl.style.opacity = '1';
+          activeEl.querySelector('.thinking-step-icon').innerHTML = spinIcon;
+        }
+        
+        container.scrollTop = container.scrollHeight;
+
+        currentStep++;
+        setTimeout(updateSteps, 2000);
+      } else {
+        setTimeout(() => {
+          if(dynamicTitle) dynamicTitle.innerText = "Completed";
+          if(dynamicSpinIcon) dynamicSpinIcon.innerHTML = checkIcon;
+          
+          stepsContainer.style.display = 'none'; // hide the inline steps
+          
+          if(dynamicBtnShowSteps) {
+            dynamicBtnShowSteps.style.display = 'block';
+            dynamicBtnShowSteps.addEventListener('click', () => {
+              document.getElementById('agent-drawer').classList.add('open');
+              startDrawerAnimation();
+            });
+          }
+          
+          onComplete(thinkingCard);
+        }, 500);
+      }
+    }
+
+    updateSteps();
+}
+
+    function sendMessage() {
+        const text = chatInput.value.trim();
+        if (!text) return;
+
+        const msgDiv = document.createElement('div');
+        msgDiv.style.display = 'flex';
+        msgDiv.style.justifyContent = 'flex-end';
+        msgDiv.style.marginBottom = '32px';
+        msgDiv.innerHTML = `
+            <div style="background: #155EEF; color: #FFFFFF; padding: 16px 20px; border-radius: 20px 20px 4px 20px; max-width: 80%; font-size: 15px; line-height: 1.5; box-shadow: 0 4px 12px rgba(21, 94, 239, 0.2);">
+                ${text}
+            </div>
+        `;
+        
+        scrollArea.appendChild(msgDiv);
+        chatInput.value = '';
+        chatPreviews.innerHTML = '';
+        selectedFiles = [];
+        setTimeout(() => {
+            scrollArea.scrollTop = scrollArea.scrollHeight;
+        }, 10);
+
+        // Run simulation
+        simulateThinking(scrollArea, (thinkingCard) => {
+            // Append bot response after simulation
+            const botResponseDiv = document.createElement('div');
+            botResponseDiv.style.cssText = "display: flex; justify-content: flex-start; margin-bottom: 24px;";
+            
+            let responseContent = `Based on the simulation, maintaining the current strategy in Qatar while targeting selective bundles in Saudi and UAE provides the optimal balance of margin protection and revenue recovery.`;
+            let responseWidth = "max-width: 85%;";
+            let wrapperWidth = "max-width: 100%; width: 100%;";
+
+            if (text.trim() === "For every seafood and fresh-catch SKU: apply a managed markdown so each unit clears at least three days before expiry. Step the price down as expiry approaches, hold a minimum margin floor.") {
+              responseWidth = "max-width: 100%; width: 100%;";
+              responseContent = `
+<div style="width: 100%;">
+  <h2 style="margin-bottom: 8px; font-size: 22px; color: #FFFFFF; font-weight: 600;">Seafood & Fresh-Catch Markdown Strategy</h2>
+  <div style="color: #8F95B2; font-size: 13px; margin-bottom: 24px;">Analysis Complete • Generated by Super Agent & Specialist Agents</div>
+  
+  <div style="display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap;">
+    <span style="background: rgba(21, 94, 239, 0.1); color: #155EEF; border: 1px solid rgba(21, 94, 239, 0.2); padding: 4px 12px; border-radius: 16px; font-size: 12px; font-weight: 600;">Categories Assessed: Seafood, Fresh-Catch</span>
+    <span style="background: rgba(21, 94, 239, 0.1); color: #155EEF; border: 1px solid rgba(21, 94, 239, 0.2); padding: 4px 12px; border-radius: 16px; font-size: 12px; font-weight: 600;">Strategy: Dynamic Markdown Curve</span>
+    <span style="background: rgba(21, 94, 239, 0.1); color: #155EEF; border: 1px solid rgba(21, 94, 239, 0.2); padding: 4px 12px; border-radius: 16px; font-size: 12px; font-weight: 600;">Target Margin Floor: 12%</span>
+  </div>
+
+  <!-- 1. Executive Summary -->
+  <div style="margin-bottom: 32px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #155EEF; color: #FFF; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">1</div>
+      <div style="font-size: 18px; color: #FFFFFF; font-weight: 600;">Executive Summary</div>
+    </div>
+    <div style="color: #8F95B2; font-size: 14px; line-height: 1.6;">
+      <p style="margin-top: 0;">Implementing a managed markdown strategy across all seafood and fresh-catch SKUs to accelerate clearance at least three days before expiry.</p>
+      <p>By stepping prices down proactively, we aim to reduce spoilage by 40% while protecting a minimum 12% margin floor. Based on cross-agent simulations, a dynamic 3-step markdown curve is recommended to capture value early and avoid total write-offs.</p>
+    </div>
+  </div>
+
+  <!-- 2. What Happened? -->
+  <div style="margin-bottom: 32px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #155EEF; color: #FFF; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">2</div>
+      <div style="font-size: 18px; color: #FFFFFF; font-weight: 600;">What Happened?</div>
+    </div>
+    <div style="font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">Key Developments</div>
+    <ul style="color: #8F95B2; font-size: 14px; line-height: 1.6; padding-left: 20px; margin-bottom: 16px;">
+      <li>Fresh-catch inventory is currently 15% above target levels.</li>
+      <li>High spoilage risk identified in specific regional coastal hubs.</li>
+      <li>Current clearance processes are reactive, leading to unnecessary margin erosion.</li>
+      <li>Weekend foot traffic presents an opportunity for targeted fresh markdowns.</li>
+    </ul>
+    <div style="font-size: 12px; color: #8F95B2; margin-bottom: 8px;">Sources</div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Inventory Data</span>
+      <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Spoilage Reports</span>
+      <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Demand Forecast</span>
+    </div>
+  </div>
+
+  <!-- 3. Why It Matters -->
+  <div style="margin-bottom: 32px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #155EEF; color: #FFF; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">3</div>
+      <div style="font-size: 18px; color: #FFFFFF; font-weight: 600;">Why It Matters</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 16px;">
+      <!-- Agent Card 1 -->
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; font-weight: 600; color: #155EEF; font-size: 13px; margin-bottom: 12px;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          Pricing & Demand Agent
+        </div>
+        <ul style="color: #8F95B2; font-size: 12px; line-height: 1.5; padding-left: 16px; margin: 0;">
+          <li>Stepped markdowns increase conversion by 22% in fresh categories.</li>
+          <li>Early weekend discounts capture high-intent shoppers.</li>
+        </ul>
+      </div>
+      <!-- Agent Card 2 -->
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; font-weight: 600; color: #155EEF; font-size: 13px; margin-bottom: 12px;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+          Inventory Agent
+        </div>
+        <ul style="color: #8F95B2; font-size: 12px; line-height: 1.5; padding-left: 16px; margin: 0;">
+          <li>15% surplus in fresh-catch categories.</li>
+          <li>Spoilage risk is highest in coastal regional hubs.</li>
+        </ul>
+      </div>
+      <!-- Agent Card 3 -->
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; font-weight: 600; color: #155EEF; font-size: 13px; margin-bottom: 12px;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          Campaign Agent
+        </div>
+        <ul style="color: #8F95B2; font-size: 12px; line-height: 1.5; padding-left: 16px; margin: 0;">
+          <li>In-store digital signage needed to highlight markdowns.</li>
+          <li>Targeted push notifications to loyalty members required.</li>
+        </ul>
+      </div>
+      <!-- Agent Card 4 -->
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; font-weight: 600; color: #155EEF; font-size: 13px; margin-bottom: 12px;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          Super Agent
+        </div>
+        <ul style="color: #8F95B2; font-size: 12px; line-height: 1.5; padding-left: 16px; margin: 0;">
+          <li>Dynamic 3-step markdown curve recommended.</li>
+          <li>Margin floor strictly protected at 12%.</li>
+        </ul>
+      </div>
+    </div>
+    <div style="font-size: 12px; color: #8F95B2; margin-bottom: 8px;">Sources</div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Pricing Intelligence</span>
+      <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Inventory Signals</span>
+      <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Campaign Calendar</span>
+    </div>
+  </div>
+
+  <!-- 4. Response Scenario Comparison -->
+  <div style="margin-bottom: 32px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #155EEF; color: #FFF; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">4</div>
+      <div style="font-size: 18px; color: #FFFFFF; font-weight: 600;">Response Scenario Comparison</div>
+    </div>
+    <div style="font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">Scenario Outcomes</div>
+    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; margin-bottom: 24px;">
+      <table style="width: 100%; text-align: left; border-collapse: collapse;">
+        <thead>
+          <tr style="background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <th style="padding: 12px 16px; color: #FFFFFF; font-weight: 600; font-size: 13px;">Scenario</th>
+            <th style="padding: 12px 16px; color: #FFFFFF; font-weight: 600; font-size: 13px;">Revenue Recovery</th>
+            <th style="padding: 12px 16px; color: #FFFFFF; font-weight: 600; font-size: 13px;">Margin Impact</th>
+            <th style="padding: 12px 16px; color: #FFFFFF; font-weight: 600; font-size: 13px;">Risk Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <td style="padding: 16px; color: #8F95B2; font-size: 13px;">Reactive Markdown</td>
+            <td style="padding: 16px; color: #8F95B2; font-size: 13px;">AED 150K</td>
+            <td style="padding: 16px; color: #8F95B2; font-size: 13px;">-18%</td>
+            <td style="padding: 16px; color: #8F95B2; font-size: 13px;">High</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <td style="padding: 16px; color: #8F95B2; font-size: 13px;">Static 20% Discount</td>
+            <td style="padding: 16px; color: #8F95B2; font-size: 13px;">AED 280K</td>
+            <td style="padding: 16px; color: #8F95B2; font-size: 13px;">-15%</td>
+            <td style="padding: 16px; color: #8F95B2; font-size: 13px;">Medium</td>
+          </tr>
+          <tr>
+            <td style="padding: 16px; color: #FFFFFF; font-size: 13px; font-weight: 500;">Dynamic Stepped Markdown</td>
+            <td style="padding: 16px; color: #FFFFFF; font-size: 13px; font-weight: 500;">AED 420K</td>
+            <td style="padding: 16px; color: #FFFFFF; font-size: 13px; font-weight: 500;">-4.8%</td>
+            <td style="padding: 16px; color: #FFFFFF; font-size: 13px; font-weight: 500;">Low</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 5. Campaign Impact -->
+  <div style="margin-bottom: 32px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #155EEF; color: #FFF; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">5</div>
+      <div style="font-size: 18px; color: #FFFFFF; font-weight: 600;">Campaign Impact</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">Campaign Assessment</div>
+        <ul style="color: #8F95B2; font-size: 13px; line-height: 1.6; padding-left: 16px; margin: 0;">
+          <li>"Fresh Catch Friday" campaign needs markdown integration.</li>
+          <li>Store signage requires immediate digital update.</li>
+          <li>Loyalty app notifications can drive evening traffic.</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">Affected Campaigns</div>
+        <table style="width: 100%; text-align: left; border-collapse: collapse;">
+          <thead>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <th style="padding: 8px 0; color: #8F95B2; font-weight: 500; font-size: 12px;">Campaign</th>
+              <th style="padding: 8px; color: #8F95B2; font-weight: 500; font-size: 12px;">Impact</th>
+              <th style="padding: 8px 0; color: #8F95B2; font-weight: 500; font-size: 12px;">Action Required</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 12px 0; color: #8F95B2; font-size: 12px;">Fresh Catch Friday</td>
+              <td style="padding: 12px; color: #8F95B2; font-size: 12px;">High</td>
+              <td style="padding: 12px 0; color: #8F95B2; font-size: 12px;">Integrate Markdown</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 12px 0; color: #8F95B2; font-size: 12px;">Weekend Loyalty Push</td>
+              <td style="padding: 12px; color: #8F95B2; font-size: 12px;">Medium</td>
+              <td style="padding: 12px 0; color: #8F95B2; font-size: 12px;">Add Fresh Incentive</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="font-size: 12px; color: #8F95B2; margin-top: 16px; margin-bottom: 8px;">Sources</div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Campaign Performance</span>
+      <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Marketing Calendar</span>
+    </div>
+  </div>
+
+  <!-- 6. Regional Response -->
+  <div style="margin-bottom: 32px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #155EEF; color: #FFF; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">6</div>
+      <div style="font-size: 18px; color: #FFFFFF; font-weight: 600;">Regional Response</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 24px;">
+      <div>
+        <table style="width: 100%; text-align: left; border-collapse: collapse;">
+          <thead>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <th style="padding: 8px 0; color: #8F95B2; font-weight: 500; font-size: 12px;">Market</th>
+              <th style="padding: 8px; color: #8F95B2; font-weight: 500; font-size: 12px;">Recommended Action</th>
+              <th style="padding: 8px 0; color: #8F95B2; font-weight: 500; font-size: 12px;">Priority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 12px 0; color: #8F95B2; font-size: 12px;">Coastal Hubs</td>
+              <td style="padding: 12px; color: #8F95B2; font-size: 12px;">Aggressive Day-3 Markdown</td>
+              <td style="padding: 12px 0; color: #FFFFFF; font-size: 12px;">High</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 12px 0; color: #8F95B2; font-size: 12px;">Inland Stores</td>
+              <td style="padding: 12px; color: #8F95B2; font-size: 12px;">Standard Day-2 Markdown</td>
+              <td style="padding: 12px 0; color: #FFFFFF; font-size: 12px;">Medium</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">Supporting Actions</div>
+        <ul style="color: #8F95B2; font-size: 13px; line-height: 1.6; padding-left: 16px; margin: 0;">
+          <li>Deploy updated pricing matrix to all store managers.</li>
+          <li>Prioritize evening shoppers for final markdowns.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Risks & Assumptions -->
+  <div style="margin-bottom: 32px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #155EEF; color: #FFF; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">7</div>
+      <div style="font-size: 18px; color: #FFFFFF; font-weight: 600;">Risks & Assumptions</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">Risk Indicators</div>
+        <table style="width: 100%; text-align: left; border-collapse: collapse;">
+          <thead>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <th style="padding: 8px 0; color: #8F95B2; font-weight: 500; font-size: 12px;">Risk</th>
+              <th style="padding: 8px 0; color: #8F95B2; font-weight: 500; font-size: 12px;">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 12px 0; color: #8F95B2; font-size: 12px;">Revenue Leakage</td>
+              <td style="padding: 12px 0; font-size: 12px; display: flex; align-items: center; gap: 8px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: #F04438;"></div> High
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 12px 0; color: #8F95B2; font-size: 12px;">Spoilage Rate</td>
+              <td style="padding: 12px 0; font-size: 12px; display: flex; align-items: center; gap: 8px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: #F79009;"></div> Medium
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 12px 0; color: #8F95B2; font-size: 12px;">Margin Pressure</td>
+              <td style="padding: 12px 0; font-size: 12px; display: flex; align-items: center; gap: 8px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: #10B981;"></div> Low
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">Assumptions</div>
+        <ul style="color: #8F95B2; font-size: 13px; line-height: 1.6; padding-left: 16px; margin: 0;">
+          <li>Weekend foot traffic remains consistent with forecast.</li>
+          <li>Store managers execute pricing changes promptly.</li>
+        </ul>
+        <div style="font-size: 12px; color: #8F95B2; margin-top: 16px; margin-bottom: 8px;">Sources</div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Historical Spoilage Data</span>
+          <span style="background: rgba(255,255,255,0.05); color: #155EEF; border-radius: 4px; padding: 4px 8px; font-size: 11px;">Footfall Forecast</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Recommended Next Actions -->
+  <div>
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #155EEF; color: #FFF; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">8</div>
+      <div style="font-size: 18px; color: #FFFFFF; font-weight: 600;">Recommended Next Actions</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; background: rgba(255,255,255,0.02); cursor: pointer;">
+        <div>
+          <div style="color: #FFFFFF; font-weight: 600; font-size: 14px; margin-bottom: 4px;">Generate Store Manager One-Pager</div>
+          <div style="color: #8F95B2; font-size: 12px;">Executive-ready summary with markdowns</div>
+        </div>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#8F95B2" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; background: rgba(255,255,255,0.02); cursor: pointer;">
+        <div>
+          <div style="color: #FFFFFF; font-weight: 600; font-size: 14px; margin-bottom: 4px;">Run Spoilage Simulation</div>
+          <div style="color: #8F95B2; font-size: 12px;">Assess impact of 3-day clearance</div>
+        </div>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#8F95B2" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </div>
+    </div>
+  </div>
+
+</div>
+`;
+            }
+
+            botResponseDiv.innerHTML = `
+              <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; ${responseWidth} width: 100%;">
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); border-radius: 20px 20px 20px 4px; padding: 20px 24px; color: #FFFFFF; font-size: 15px; line-height: 1.6; box-shadow: 0 4px 20px rgba(0,0,0,0.2); width: 100%;">
+                  ${responseContent}
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; margin-left: 8px;">
+                  <div style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <img src="logo.jpg" alt="Meridian" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.5);">
+                  </div>
+                  <span style="color: #FFFFFF; font-weight: 600; font-size: 14px;">Meridian</span>
+                  <span style="color: #8F95B2; font-size: 12px;">Just now</span>
+                </div>
+              </div>
+            `;
+            scrollArea.appendChild(botResponseDiv);
+            scrollArea.scrollTop = scrollArea.scrollHeight;
+        });
+    }
+
+    btnSend.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+}
+
+// --- Drawer & Modal Logic ---
+const agentDrawer = document.getElementById('agent-drawer');
+const drawerCloseBtn = document.getElementById('drawer-close');
+const drawerTimeline = document.getElementById('drawer-timeline');
+const modalBackdrop = document.getElementById('agent-modal-backdrop');
+const modal = document.getElementById('agent-modal');
+const modalClose = document.getElementById('modal-close');
+const modalTitle = document.querySelector('.agent-modal-title');
+const modalContent = document.querySelector('.agent-modal-content');
+
+// Helper to open modal
+function openModal(title, dataArray, activeIndex) {
+    modalTitle.innerHTML = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> <span>${title}</span>`;
+    
+    let html = '<div class="steps-accordion">';
+    dataArray.forEach((data, i) => {
+       html += `
+        <div class="step-accordion-item ${i === activeIndex ? 'expanded' : ''}">
+          <div class="step-accordion-line"></div>
+          <div class="step-accordion-icon completed">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="step-accordion-content">
+            <div class="step-accordion-header" onclick="this.parentElement.parentElement.classList.toggle('expanded')">
+              <div>
+                <div class="step-accordion-title" style="font-size:16px; font-weight:700; color:#FFFFFF;">${data.title}</div>
+                <div class="step-accordion-subtitle" style="font-size:13px; color:#8F95B2; margin-top:4px;">${data.subtitle}</div>
+              </div>
+              <svg class="step-accordion-toggle" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="step-accordion-body">
+              <p style="color:#8F95B2; line-height:1.5; margin-bottom:16px;">${data.desc}</p>
+              ${data.sections.map(sec => `
+                <div class="agent-modal-section" style="margin-bottom: 24px;">
+                  <div class="agent-modal-subtitle" style="font-size:14px; font-weight:600; color:#FFFFFF; margin-bottom:8px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 4px;">${sec.heading}</div>
+                  ${sec.content}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+       `;
+    });
+    html += '</div>';
+    
+    modalContent.innerHTML = html;
+    modalBackdrop.style.display = 'block';
+    modal.style.display = 'flex';
+}
+
+if (drawerTimeline) {
+    drawerTimeline.innerHTML = '';
+    stepsData.forEach((step, index) => {
+        const drawerStep = document.createElement('div');
+        drawerStep.className = 'drawer-timeline-item';
+        drawerStep.id = `drawer-timeline-step-${index}`;
+        drawerStep.innerHTML = `
+            <div class="drawer-step-dot"></div>
+            <div class="drawer-timeline-title">${step.title}</div>
+        `;
+        drawerTimeline.appendChild(drawerStep);
+        
+        drawerStep.addEventListener('click', () => {
+            openModal('Thinking Steps Details', stepsData, index);
+        });
+    });
+}
+
+// Bind Agent Cards
+document.querySelectorAll('.agent-card-side').forEach((card, index) => {
+    // Overwrite their HTML to match the new content if needed, but we injected them statically earlier.
+    // Let's actually dynamically re-render the agent cards to match the requested design and content
+    const drawerAgents = document.querySelector('.drawer-agents');
+    if (drawerAgents && index === 0) { // Do once
+        drawerAgents.innerHTML = '';
+        agentsData.forEach((agent, i) => {
+            const agentHtml = `
+                <div class="agent-card-side" id="drawer-agent-${i}">
+                    <div class="agent-icon">${agent.icon}</div>
+                    <div class="agent-info">
+                        <div class="agent-name">${agent.title}</div>
+                        <div class="agent-desc" style="font-size: 11px;">${agent.subtitle}</div>
+                    </div>
+                </div>
+            `;
+            drawerAgents.insertAdjacentHTML('beforeend', agentHtml);
+        });
+        
+        // Re-bind listeners to the new cards
+        document.querySelectorAll('.agent-card-side').forEach((newCard, i) => {
+            newCard.addEventListener('click', () => {
+                openModal('Agent Reasoning Details', agentsData, i);
+            });
+        });
+    }
+});
+
+// Close Modals
+if (modalClose) {
+    modalClose.addEventListener('click', () => {
+        modalBackdrop.style.display = 'none';
+        modal.style.display = 'none';
+    });
+}
+if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', () => {
+        modalBackdrop.style.display = 'none';
+        modal.style.display = 'none';
+    });
+}
+
+// Drawer Animation Logic
+let drawerAnimationIdx = 0;
+let drawerAnimationRunning = false;
+
+function startDrawerAnimation() {
+    if (drawerAnimationRunning) return;
+    drawerAnimationRunning = true;
+    drawerAnimationIdx = 0;
+    
+    // Reset all
+    document.querySelectorAll('.drawer-timeline-item').forEach(el => el.classList.remove('active', 'completed'));
+    document.querySelectorAll('.agent-card-side').forEach(el => el.classList.remove('active', 'completed'));
+    
+    function tick() {
+        if (drawerAnimationIdx > 0) {
+            const prevTL = document.getElementById(`drawer-timeline-step-${drawerAnimationIdx - 1}`);
+            if (prevTL) prevTL.classList.replace('active', 'completed');
+            
+            const prevAgent = document.getElementById(`drawer-agent-${drawerAnimationIdx - 1}`);
+            if (prevAgent) prevAgent.classList.replace('active', 'completed');
+        }
+        
+        if (drawerAnimationIdx < stepsData.length) {
+            const tl = document.getElementById(`drawer-timeline-step-${drawerAnimationIdx}`);
+            if (tl) tl.classList.add('active');
+            
+            const agent = document.getElementById(`drawer-agent-${drawerAnimationIdx}`);
+            if (agent) agent.classList.add('active');
+            
+            drawerAnimationIdx++;
+            setTimeout(tick, 1000);
+        }
+    }
+    
+    tick();
+}
+
+// Trigger drawer
+document.querySelectorAll('[onclick*="agent-drawer"]').forEach(btn => {
+    btn.removeAttribute('onclick'); // remove inline to handle it clean
+    btn.addEventListener('click', () => {
+        agentDrawer.classList.add('open');
+        startDrawerAnimation();
+    });
+});
+
+if (drawerCloseBtn) {
+    drawerCloseBtn.addEventListener('click', () => {
+        agentDrawer.classList.remove('open');
+    });
+}
+
+</script>
+</body>
+</html>

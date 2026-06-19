@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian - Dark AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" style="background: #000000; padding: 24px 16px; border-right: 1px solid rgba(255,255,255,0.12);">
+    <div class="logo-area" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; padding: 0 8px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div class="logo-icon" style="width: 28px; height: 28px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000;">
+          <img src="logo.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="logo-text" style="font-size: 15px; font-weight: 500; color: #fff;">Meridian</div>
+      </div>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#8F95B2" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </div>
+
+    <nav class="nav-menu" style="display: flex; flex-direction: column; gap: 4px;">
+      <a href="#" class="nav-item active" style="background: #155EEF; color: #fff; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none; border-left: none;">
+        <img src="dashboard-icon.png" style="width: 18px; height: 18px; object-fit: contain; mix-blend-mode: screen;">
+        Dashboard
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Agents
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+        Workflows
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        Campaigns
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+        Insights
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        Documents
+      </a>
+      <a href="#" class="nav-item" style="color: #8F95B2; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        Settings
+      </a>
+    </nav>
+
+    <div class="sidebar-profile" style="position: absolute; bottom: 24px; left: 16px; right: 16px; display: flex; align-items: center; justify-content: space-between; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; cursor: pointer;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden;">
+          <img src="profile.jpg" alt="Profile" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transform: scale(1.3);">
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 13px; font-weight: 500; color: #fff;">Reem</span>
+          <span style="font-size: 11px; color: #8F95B2;">Commercial Manager</span>
+        </div>
+      </div>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#8F95B2" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    
+    
+    
+    
+    <!-- Scrollable Content -->
+    <div class="content-scroll" style="padding: 32px 40px; height: 100vh; overflow: hidden; display: flex; flex-direction: column; background: #0A0A0C;">
+      
+      <!-- Welcome Header -->
+      <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; flex-shrink: 0;">
+        <div>
+          <h1 style="font-size: 26px; font-weight: 500; color: #FFFFFF; margin-bottom: 8px; letter-spacing: -0.3px;">Good Morning Reem ✨</h1>
+          <p style="font-size: 13px; color: #8F95B2;">Here's what I took care for you in last 12 hours. within your rules - ready for you review.</p>
+        </div>
+        <button class="notification-btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+        </button>
+      </div>
+
+      
+      
+      <!-- Navigation Tabs -->
+      <div style="display: flex; gap: 32px; margin-bottom: 24px; padding-bottom: 0;">
+        <div style="padding-bottom: 12px; border-bottom: 2px solid #155EEF; color: #FFFFFF; font-size: 14px; font-weight: 500; cursor: pointer;">Overview</div>
+        <a href="chat.html" style="padding-bottom: 12px; color: #8F95B2; font-size: 14px; font-weight: 400; cursor: pointer; text-decoration: none;">Chat</a>
+        <div style="padding-bottom: 12px; color: #8F95B2; font-size: 14px; font-weight: 400; cursor: pointer;">ROI</div>
+        <div style="padding-bottom: 12px; color: #8F95B2; font-size: 14px; font-weight: 400; cursor: pointer;">Activity</div>
+      </div>
+<!-- Bento Grid (CSS Grid Layout) -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: min-content; gap: 16px; width: 100%;">
+
+        <!-- Top Left: Stress Tested -->
+        <div class="glass-panel" style="grid-column: span 2; padding: 24px 32px; display: flex; flex-direction: column; background: #13151D; border: 1px solid rgba(255,255,255,0.03); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <h2 style="font-size: 20px; font-weight: 600; color: #FFFFFF; margin: 0; letter-spacing: -0.3px;">Stress-tested your seafood against the weekend promo.</h2>
+              <span style="display: inline-flex; align-items: center; padding: 4px 12px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 100px; font-size: 11px; color: #10B981; white-space: nowrap; font-weight: 500;">Done</span>
+            </div>
+            <button style="background: transparent; border: none; color: #155EEF; font-size: 13px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 0;">Open seafood review &rarr;</button>
+          </div>
+          <p style="font-size: 13px; color: #8F95B2; width: 75%; line-height: 1.6; margin-bottom: 24px;">Checked every fresh-catch line against a competitor's expected weekend push. A few need a closer look - I've drafted the responses for you.</p>
+          
+          <div style="display: flex; gap: 16px; width: 100%;">
+            <!-- Box 1 -->
+            <div style="flex: 1; background: #181B24; border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; padding: 24px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <div style="font-size: 32px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">38,420</div>
+              <div style="display: flex; align-items: center; width: 100%; gap: 8px;">
+                <div style="height: 1px; width: 16px; background: #155EEF;"></div>
+                <div style="font-size: 10px; font-weight: 600; color: #8F95B2; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">REVIEWED OVERNIGHT</div>
+                <div style="height: 1px; width: 16px; background: #155EEF;"></div>
+              </div>
+            </div>
+            <!-- Box 2 -->
+            <div style="flex: 1; background: #181B24; border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; padding: 24px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <div style="font-size: 32px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">35,100</div>
+              <div style="display: flex; align-items: center; width: 100%; gap: 8px;">
+                <div style="height: 1px; width: 16px; background: #C084FC;"></div>
+                <div style="font-size: 10px; font-weight: 600; color: #8F95B2; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">AUTO-APPROVED</div>
+                <div style="height: 1px; width: 16px; background: #C084FC;"></div>
+              </div>
+            </div>
+            <!-- Box 3 -->
+            <div style="flex: 1; background: #181B24; border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; padding: 24px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <div style="font-size: 28px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px; line-height: 1.1;">+AED<br>12.4M</div>
+              <div style="display: flex; align-items: center; width: 100%; gap: 8px;">
+                <div style="height: 1px; width: 16px; background: #10B981;"></div>
+                <div style="font-size: 10px; font-weight: 600; color: #8F95B2; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">REVENUE IMPACT</div>
+                <div style="height: 1px; width: 16px; background: #10B981;"></div>
+              </div>
+            </div>
+            <!-- Box 4 -->
+            <div style="flex: 1; background: #181B24; border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; padding: 24px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <div style="font-size: 32px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">−21%</div>
+              <div style="display: flex; align-items: center; width: 100%; gap: 8px;">
+                <div style="height: 1px; width: 16px; background: rgba(255,255,255,0.15);"></div>
+                <div style="font-size: 10px; font-weight: 600; color: #8F95B2; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">WASTE</div>
+                <div style="height: 1px; width: 16px; background: rgba(255,255,255,0.15);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Right: Since we went live -->
+        <div class="glass-panel" style="grid-column: 3; padding: 24px; display: flex; flex-direction: column; background: #13151D; border: 1px solid rgba(255,255,255,0.03); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <h2 style="font-size: 17px; font-weight: 600; color: #FFFFFF; margin: 0; letter-spacing: -0.3px;">Since we went live</h2>
+            <span style="display: inline-flex; align-items: center; padding: 4px 12px; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 100px; font-size: 11px; color: #3B82F6; white-space: nowrap; font-weight: 500;">Updated 2 hrs ago</span>
+          </div>
+          <p style="font-size: 12px; color: #8F95B2; line-height: 1.6; margin-bottom: 24px;">Numbers are improving. Less waste, healthier margin - without raising a single price on the things people rely on.</p>
+          
+          <div style="display: flex; justify-content: space-between; padding-right: 12px;">
+            <div>
+              <div style="font-size: 12px; font-weight: 500; color: #FFFFFF; margin-bottom: 4px;">waste</div>
+              <div style="font-size: 12px; color: #10B981; margin-bottom: 2px;">-21%</div>
+              <div style="font-size: 10px; color: #8F95B2;">reduction YoY</div>
+            </div>
+            <div>
+              <div style="font-size: 12px; font-weight: 500; color: #FFFFFF; margin-bottom: 4px;">margin</div>
+              <div style="font-size: 12px; color: #10B981;">+3 pts</div>
+            </div>
+            <div>
+              <div style="font-size: 12px; font-weight: 500; color: #FFFFFF; margin-bottom: 4px;">Revenue Jump</div>
+              <div style="font-size: 12px; color: #10B981; margin-bottom: 2px;">12%</div>
+              <div style="font-size: 10px; color: #8F95B2;">increase YoY</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Left: Expiring soon -->
+        <div class="glass-panel" style="grid-column: 1; padding: 24px; height: 100%; display: flex; flex-direction: column; background: #13151D; border: 1px solid rgba(255,255,255,0.03); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+          <h2 style="font-size: 17px; font-weight: 600; color: #FFFFFF; margin-bottom: 12px; letter-spacing: -0.3px;">Prices updated for expiring soon staples.</h2>
+          <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+            <span style="display: inline-flex; align-items: center; padding: 4px 12px; background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 100px; font-size: 11px; color: #C084FC; font-weight: 500;">Handled</span>
+            <span style="display: inline-flex; align-items: center; padding: 4px 12px; background: rgba(20, 184, 166, 0.1); border: 1px solid rgba(20, 184, 166, 0.2); border-radius: 100px; font-size: 11px; color: #14B8A6; font-weight: 500;">All Clear</span>
+          </div>
+          <p style="font-size: 12px; color: #8F95B2; line-height: 1.6; margin-bottom: 24px;">Marked down fresh items in good time, so we sell them - not bin them.</p>
+          
+          <div style="display: flex; justify-content: space-between; align-items: center; flex: 1; padding: 0 16px;">
+            <!-- Left Legend -->
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: #155EEF; box-shadow: 0 0 6px #155EEF;"></div>
+                <div style="font-size: 12px; color: #FFFFFF; font-weight: 500;">Priced to clear</div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: #06B6D4; box-shadow: 0 0 6px #06B6D4;"></div>
+                <div style="font-size: 12px; color: #FFFFFF; font-weight: 500;">Price held</div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: #A855F7; box-shadow: 0 0 6px #A855F7;"></div>
+                <div style="font-size: 12px; color: #FFFFFF; font-weight: 500;">Price updated</div>
+              </div>
+            </div>
+            
+            <!-- Right Chart -->
+            <div style="position: relative; width: 160px; height: 160px; display: flex; align-items: center; justify-content: center;">
+              <svg viewBox="0 0 240 240" style="width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible;">
+                <defs>
+                  <filter id="glow-blue"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                  <filter id="glow-cyan"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                  <filter id="glow-purple"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+                
+                <!-- Background tracks -->
+                <circle cx="120" cy="120" r="100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="14"></circle>
+                <circle cx="120" cy="120" r="76" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="14"></circle>
+                <circle cx="120" cy="120" r="52" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="14"></circle>
+                
+                <!-- Data arcs -->
+                <circle cx="120" cy="120" r="100" fill="none" stroke="#155EEF" stroke-width="14" stroke-linecap="round" stroke-dasharray="282 628.3" filter="url(#glow-blue)"></circle>
+                <circle cx="120" cy="120" r="76" fill="none" stroke="#06B6D4" stroke-width="14" stroke-linecap="round" stroke-dasharray="167 477.5" filter="url(#glow-cyan)"></circle>
+                <circle cx="120" cy="120" r="52" fill="none" stroke="#A855F7" stroke-width="14" stroke-linecap="round" stroke-dasharray="72 326.7" filter="url(#glow-purple)"></circle>
+              </svg>
+              <!-- Center Text -->
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; line-height: 1.3; width: 80px;">
+                <div style="font-size: 10px; color: #FFFFFF; font-weight: 500;">Expiring Soon</div>
+                <div style="font-size: 10px; color: #FFFFFF; font-weight: 500;">Price Overview</div>
+              </div>
+              
+              <!-- Badges -->
+              <div style="position: absolute; top: 140px; left: 140px; background: rgba(21, 94, 239, 0.15); border: 1px solid #155EEF; border-radius: 100px; padding: 2px 6px; font-size: 9px; font-weight: 500; color: #fff; transform: translate(-50%, -50%);">71.2K</div>
+              <div style="position: absolute; top: 110px; left: 140px; background: rgba(6, 182, 212, 0.15); border: 1px solid #06B6D4; border-radius: 100px; padding: 2px 6px; font-size: 9px; font-weight: 500; color: #fff; transform: translate(-50%, -50%);">51.0K</div>
+              <div style="position: absolute; top: 75px; left: 125px; background: rgba(168, 85, 247, 0.15); border: 1px solid #A855F7; border-radius: 100px; padding: 2px 6px; font-size: 9px; font-weight: 500; color: #fff; transform: translate(-50%, -50%);">18.0K</div>
+            </div>
+            
+            <!-- Bottom Metrics Row hidden as requested -->
+          </div>
+        </div>
+
+        <!-- Bottom Mid: Prices steady -->
+        <div class="glass-panel" style="grid-column: 2; padding: 24px; height: 100%; display: flex; flex-direction: column; background: #13151D; border: 1px solid rgba(255,255,255,0.03); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); position: relative; overflow: hidden;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; position: relative; z-index: 2;">
+            <h2 style="font-size: 17px; font-weight: 600; color: #FFFFFF; margin: 0; letter-spacing: -0.3px;">Prices held steady to keep us sharp</h2>
+            <span style="display: inline-flex; align-items: center; padding: 4px 12px; background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 100px; font-size: 11px; color: #C084FC; font-weight: 500;">Handled</span>
+          </div>
+          <p style="font-size: 12px; color: #8F95B2; line-height: 1.6; margin-bottom: 24px; position: relative; z-index: 2;">Matched the few known-value prices that moved overnight - no surprises on the shelf.</p>
+          
+          <div style="font-size: 12px; color: #8F95B2; position: relative; z-index: 2;">
+            <span style="color: #FFFFFF; font-size: 16px; font-weight: 600;">≈ 21,000</span><br>perishables - price held for now
+          </div>
+
+          <!-- Background Texture -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('prices-texture.png'); background-size: cover; background-position: right center; opacity: 0.8; mix-blend-mode: screen; pointer-events: none; mask-image: radial-gradient(circle at bottom right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%); -webkit-mask-image: radial-gradient(circle at bottom right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);"></div>
+        </div>
+
+        <!-- Right Side Middle/Bottom Container (Spans column 3) -->
+        <div style="grid-column: 3; display: flex; flex-direction: column; gap: 16px;">
+            
+            <!-- Mid Right: Held the line -->
+            <div class="glass-panel" style="padding: 24px; display: flex; flex-direction: column; background: #13151D; border: 1px solid rgba(255,255,255,0.03); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                <h2 style="font-size: 17px; font-weight: 600; color: #FFFFFF; margin: 0; letter-spacing: -0.3px;">Held the line on your staples.</h2>
+                <span style="display: inline-flex; align-items: center; padding: 4px 12px; background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 100px; font-size: 11px; color: #C084FC; font-weight: 500;">Handled</span>
+                <button style="background: transparent; border: none; color: #155EEF; font-size: 13px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding: 0; margin-left: auto;">View &rarr;</button>
+              </div>
+              <p style="font-size: 12px; color: #8F95B2; line-height: 1.6; margin-bottom: 12px;">All products - protected, so the basket stays trusted.</p>
+              <ul style="font-size: 12px; color: #8F95B2; padding-left: 16px; margin-bottom: 24px; line-height: 1.6;">
+                <li>240 Staples reviewed,</li>
+                <li>240 staple prices updated.</li>
+              </ul>
+              
+            </div>
+
+            <!-- Bottom Right: Pending Review -->
+            <div class="glass-panel" style="flex: 1; padding: 24px; display: flex; flex-direction: column; background: #13151D; border: 1px solid rgba(255,255,255,0.03); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+              <h2 style="font-size: 17px; font-weight: 600; color: #FFFFFF; margin-bottom: 8px; letter-spacing: -0.3px;">Pending for your review</h2>
+              <div style="font-size: 13px; color: #FFFFFF; margin-bottom: 24px; font-weight: 500;">210 pending</div>
+              
+              <div style="font-size: 12px; color: #FFFFFF; font-weight: 600; margin-bottom: 12px;">Tabular view</div>
+              <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding-bottom: 12px; align-items: center;">
+                  <div style="font-size: 13px; color: #FFFFFF; font-weight: 500;">Product</div>
+                  <div style="font-size: 13px; color: #FFFFFF; font-weight: 500;">Price</div>
+                  <div style="font-size: 13px; color: #FFFFFF; font-weight: 500;">Priority</div>
+                </div>
+              
+              <!-- Data Table -->
+              <div style="margin-top: 8px; width: 100%; border-collapse: collapse; display: flex; flex-direction: column; gap: 0;">
+                
+                <!-- Row 1 -->
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 8px 0; align-items: center;">
+                  <div style="font-size: 12px; color: #FFFFFF;">Imported Cheese</div>
+                  <div style="font-size: 12px; color: #FFFFFF;">$24.99</div>
+                  <div style="font-size: 12px; color: #8F95B2;">High</div>
+                </div>
+
+                <!-- Row 2 -->
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 8px 0; align-items: center;">
+                  <div style="font-size: 12px; color: #FFFFFF;">Ramadan Gift Sets</div>
+                  <div style="font-size: 12px; color: #FFFFFF;">$39.99</div>
+                  <div style="font-size: 12px; color: #8F95B2;">Medium</div>
+                </div>
+
+                <!-- Row 3 -->
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 8px 0; align-items: center;">
+                  <div style="font-size: 12px; color: #FFFFFF;">Everyday Price Move</div>
+                  <div style="font-size: 12px; color: #FFFFFF;">$18.50</div>
+                  <div style="font-size: 12px; color: #8F95B2;">High</div>
+                </div>
+
+                <!-- Row 4 -->
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 8px 0; align-items: center;">
+                  <div style="font-size: 12px; color: #FFFFFF;">Organic Olive Oil</div>
+                  <div style="font-size: 12px; color: #FFFFFF;">$15.99</div>
+                  <div style="font-size: 12px; color: #8F95B2;">Low</div>
+                </div>
+
+                <!-- Row 5 -->
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 8px 0; align-items: center;">
+                  <div style="font-size: 12px; color: #FFFFFF;">Premium Dates Pack</div>
+                  <div style="font-size: 12px; color: #FFFFFF;">$12.99</div>
+                  <div style="font-size: 12px; color: #8F95B2;">Medium</div>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  
+    <!-- Floating Prompt Box -->
+    <div style="position: fixed; bottom: 32px; left: calc(280px + (100vw - 280px) / 2); transform: translateX(-50%); width: 500px; background: #13151D; border: 1px solid rgba(255,255,255,0.05); border-radius: 100px; padding: 10px 10px 10px 24px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 12px 40px rgba(0,0,0,0.5); z-index: 1000;">
+      <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#8F95B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+        <input type="text" placeholder="Ask anything" style="background: transparent; border: none; color: #FFFFFF; font-size: 14px; outline: none; width: 100%;">
+      </div>
+      <button style="background: #155EEF; border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-left: 12px;">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+  </main>
+
+</body>
+</html>
